@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".MininutricionalActivity">
+
+    <TextView
+        android:id="@+id/tvExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/secondaryColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/josefin_bold"
+        android:gravity="center"
+        android:text="@string/mininutricional_string"
+        android:textColor="@color/secondaryColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvExp" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:fontFamily="@font/josefin_medium"
+        android:text="Fecha"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/secondaryDarkColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/common_padding_default"
+        app:layout_constraintBottom_toTopOf="@id/logouaq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDate">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvMiniN1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="center_vertical"
+                android:text="@string/strMiniN1"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="100dp"
+                tools:layout_editor_absoluteY="174dp" />
+
+            <RadioGroup
+                android:id="@+id/rg1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/tvMiniN1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:fontFamily="@font/josefin_bold"
+                    android:text="@string/strMiniN2"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN3"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN4"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN5"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rg2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/rg1"
+                app:layout_constraintTop_toBottomOf="@id/rg1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:fontFamily="@font/josefin_bold"
+                    android:text="@string/strMiniN6"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN7"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN8"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN9"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN10"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rg3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/rg1"
+                app:layout_constraintTop_toBottomOf="@+id/rg2">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:fontFamily="@font/josefin_bold"
+                    android:text="@string/strMiniN11"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN12"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN13"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN14"
+                    android:textSize="14sp" />
+
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rg4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/rg1"
+                app:layout_constraintTop_toBottomOf="@+id/rg3">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:text="@string/strMiniN15"
+                    android:fontFamily="@font/josefin_bold"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN16"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN17"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rg5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/rg1"
+                app:layout_constraintTop_toBottomOf="@+id/rg4">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:fontFamily="@font/josefin_bold"
+                    android:text="@string/strMiniN18"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN19"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN20"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN21"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@id/rg1"
+                app:layout_constraintTop_toBottomOf="@id/rg5">
+
+                <TextView
+                    android:id="@+id/tvIMC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:text="@string/strMiniN22"
+                    android:fontFamily="@font/josefin_bold"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/rg1"
+                    app:layout_constraintTop_toBottomOf="@id/rg5" />
+
+                <EditText
+                    android:id="@+id/etIMC"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:hint="@string/strMiniN22"
+                    android:fontFamily="@font/josefin_bold"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp"
+                    android:backgroundTint="@color/secondaryDarkColor"
+                    android:importantForAutofill="no"
+                    android:inputType="number|numberDecimal"
+                    app:layout_constraintStart_toEndOf="@id/tvIMC"
+                    app:layout_constraintTop_toTopOf="@id/tvIMC" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvMiniN2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_dimen"
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="center_vertical"
+                android:text="@string/strMiniN23"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@id/linear1"
+                tools:layout_editor_absoluteX="100dp" />
+
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@id/rg1"
+                app:layout_constraintTop_toBottomOf="@id/tvMiniN2">
+
+                <TextView
+                    android:id="@+id/tvCB"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/josefin_bold"
+                    android:text="@string/strMiniN61"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/rg1"
+                    app:layout_constraintTop_toBottomOf="@id/rg5" />
+
+                <EditText
+                    android:id="@+id/etCB"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:hint="@string/strMiniN63"
+                    android:importantForAutofill="no"
+                    android:inputType="number|numberDecimal"
+                    app:layout_constraintStart_toEndOf="@id/tvIMC"
+                    app:layout_constraintTop_toTopOf="@id/tvIMC" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@id/rg1"
+                app:layout_constraintTop_toBottomOf="@id/linear2">
+
+                <TextView
+                    android:id="@+id/tvCP"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/josefin_bold"
+                    android:text="@string/strMiniN62"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/rg1"
+                    app:layout_constraintTop_toBottomOf="@id/rg5" />
+
+                <EditText
+                    android:id="@+id/etCP"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:hint="@string/strMiniN64"
+                    android:importantForAutofill="no"
+                    android:inputType="number|numberDecimal"
+                    app:layout_constraintStart_toEndOf="@id/tvIMC"
+                    app:layout_constraintTop_toTopOf="@id/tvIMC" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/rg6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/rg1"
+                app:layout_constraintTop_toBottomOf="@+id/linear3">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:fontFamily="@font/josefin_bold"
+                    android:text="@string/strMiniN24"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN25"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN26"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rg7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/rg1"
+                app:layout_constraintTop_toBottomOf="@+id/rg6">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:fontFamily="@font/josefin_bold"
+                    android:text="@string/strMiniN27"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN28"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN29"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rg8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/rg1"
+                app:layout_constraintTop_toBottomOf="@+id/rg7">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:fontFamily="@font/josefin_bold"
+                    android:text="@string/strMiniN30"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN31"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN32"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rg9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/rg1"
+                app:layout_constraintTop_toBottomOf="@+id/rg8">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:fontFamily="@font/josefin_bold"
+                    android:text="@string/strMiniN33"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN34"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN35"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN36"
+                    android:textSize="14sp" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rg10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/rg1"
+                app:layout_constraintTop_toBottomOf="@+id/rg9">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:fontFamily="@font/josefin_bold"
+                    android:text="@string/strMiniN37"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/etConsume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:backgroundTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:hint="@string/strMiniN65"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    app:layout_constraintStart_toEndOf="@id/tvIMC"
+                    app:layout_constraintTop_toTopOf="@id/tvIMC" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN38"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN26"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN39"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN27"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN40"
+                    android:textSize="14sp" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rg11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/rg1"
+                app:layout_constraintTop_toBottomOf="@+id/rg10">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:fontFamily="@font/josefin_bold"
+                    android:text="@string/strMiniN41"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN28"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN42"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN29"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN43"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rg12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/rg1"
+                app:layout_constraintTop_toBottomOf="@+id/rg11">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:fontFamily="@font/josefin_bold"
+                    android:text="@string/strMiniN44"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN45"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN46"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN32"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN47"
+                    android:textSize="14sp" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rg13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/rg1"
+                app:layout_constraintTop_toBottomOf="@+id/rg12">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:fontFamily="@font/josefin_bold"
+                    android:text="@string/strMiniN48"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN33"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN49"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN34"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN50"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN35"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN51"
+                    android:textSize="14sp" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rg14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/rg1"
+                app:layout_constraintTop_toBottomOf="@+id/rg13">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:fontFamily="@font/josefin_bold"
+                    android:text="@string/strMiniN52"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN36"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN53"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN37"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN54"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN38"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN55"
+                    android:textSize="14sp" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rg15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/rg14"
+                tools:layout_editor_absoluteX="100dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:fontFamily="@font/josefin_bold"
+                    android:text="@string/strMiniN56"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN39"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN57"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN40"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN58"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN41"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN59"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMiN42"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniN60"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <TextView
+
+                android:id="@+id/tvRes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/bRes_string" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:src="@drawable/ic_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nestedScroll" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logouaq"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginStart="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/logouaq"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ingenieria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/ingenieria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/enfermeria" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/enfermeria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/enfermeria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

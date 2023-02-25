@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".GdsActivity">
+
+    <TextView
+        android:id="@+id/tvExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/secondaryColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/josefin_bold"
+        android:gravity="center"
+        android:text="@string/escala_gds"
+        android:textColor="@color/secondaryColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvExp" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:fontFamily="@font/josefin_medium"
+        android:text="Fecha"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/secondaryDarkColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/common_padding_default"
+        app:layout_constraintBottom_toTopOf="@id/logouaq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDate">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sGDS1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_dimen"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strGDS2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sGDS2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/switch_dimen"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strGDS3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sGDS1" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sGDS3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/switch_dimen"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strGDS4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sGDS2" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sGDS4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/switch_dimen"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strGDS5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sGDS3" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sGDS5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/switch_dimen"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strGDS6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sGDS4" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sGDS6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/switch_dimen"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strGDS7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sGDS5" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sGDS7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/switch_dimen"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strGDS8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sGDS6" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sGDS8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/switch_dimen"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strGDS9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sGDS7" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sGDS9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/switch_dimen"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strGDS10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sGDS8" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sGDS10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/switch_dimen"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strGDS11"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sGDS9" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sGDS11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/switch_dimen"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strGDS12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sGDS10" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sGDS12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/switch_dimen"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strGDS13"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sGDS11" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sGDS13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/switch_dimen"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strGDS14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sGDS12" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sGDS14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/switch_dimen"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strGDS15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sGDS13" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sGDS15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/switch_dimen"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strGDS2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sGDS14" />
+
+            <TextView
+                android:id="@+id/tvRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/default_dimen"
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sGDS15" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/bRes_string"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRes" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:src="@drawable/ic_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nestedScroll" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logouaq"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginStart="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/logouaq"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ingenieria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/ingenieria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/enfermeria" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/enfermeria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/enfermeria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

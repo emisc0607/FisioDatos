@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".BateryBrActivity">
+
+    <TextView
+        android:id="@+id/tvExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/secondaryColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/josefin_bold"
+        android:gravity="center"
+        android:text="@string/bateryBr"
+        android:textColor="@color/secondaryColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvExp" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:fontFamily="@font/josefin_medium"
+        android:text="Fecha"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/secondaryDarkColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/common_padding_default"
+        app:layout_constraintBottom_toTopOf="@id/logouaq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDate">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvBbr1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="left"
+                android:text="Prueba de equilibrio"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_column="2"
+                        android:fontFamily="@font/josefin_regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/common_padding_default"
+                        android:text="INDICACIÓN"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_column="3"
+                        android:fontFamily="@font/josefin_regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/common_padding_default"
+                        android:text="IZQUIERDO (s)"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_column="4"
+                        android:fontFamily="@font/josefin_regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/common_padding_default"
+                        android:text="DERECHO (s)"
+                        android:textSize="14dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_column="1"
+                        android:src="@drawable/piesjuntos" />
+
+                    <TextView
+                        android:layout_column="2"
+                        android:fontFamily="@font/josefin_regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/common_padding_default"
+                        android:text="Pies juntos"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/etBbr1"
+                        android:layout_column="3"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:gravity="center"
+                        android:hint="10"
+                        android:inputType="numberDecimal"
+                        android:paddingHorizontal="@dimen/common_padding_default"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/etBbr2"
+                        android:layout_column="4"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:gravity="center"
+                        android:hint="10"
+                        android:inputType="numberDecimal"
+                        android:paddingHorizontal="@dimen/common_padding_default"
+                        android:textSize="14dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_column="1"
+                        android:src="@drawable/semtand" />
+
+                    <TextView
+                        android:layout_column="2"
+                        android:fontFamily="@font/josefin_regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/common_padding_default"
+                        android:text="Semi-tandem"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/etBbr3"
+                        android:layout_column="3"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:gravity="center"
+                        android:hint="10"
+                        android:inputType="numberDecimal"
+                        android:paddingHorizontal="@dimen/common_padding_default"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/etBbr4"
+                        android:layout_column="4"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:gravity="center"
+                        android:hint="10"
+                        android:inputType="numberDecimal"
+                        android:paddingHorizontal="@dimen/common_padding_default"
+                        android:textSize="14dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_column="1"
+                        android:src="@drawable/tand" />
+
+                    <TextView
+                        android:layout_column="2"
+                        android:fontFamily="@font/josefin_regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/common_padding_default"
+                        android:text="Tandem"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/etBbr5"
+                        android:layout_column="3"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:gravity="center"
+                        android:hint="10"
+                        android:inputType="numberDecimal"
+                        android:paddingHorizontal="@dimen/common_padding_default"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/etBbr6"
+                        android:layout_column="4"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:gravity="center"
+                        android:hint="10"
+                        android:inputType="numberDecimal"
+                        android:paddingHorizontal="@dimen/common_padding_default"
+                        android:textSize="14dp" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvBbr2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="left"
+                    android:text="Prueba de caminar"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:src="@drawable/pruebacaminar" />
+
+                <TextView />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginEnd="100dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbBbr1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="50dp"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="Ninguna" />
+
+                    <RadioButton
+                        android:id="@+id/rbBbr2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="50dp"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="Muleta" />
+
+                    <RadioButton
+                        android:id="@+id/rbBbr3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="Andador" />
+                </RadioGroup>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="100dp">
+
+                    <TextView
+                        android:layout_column="1"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/common_padding_default"
+                        android:text="Intento 1:" />
+
+                    <EditText
+                        android:id="@+id/etBbr7"
+                        android:layout_column="2"
+                        android:layout_marginEnd="30dp"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:hint="10"
+                        android:inputType="numberDecimal" />
+
+                    <TextView
+                        android:layout_column="3"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/common_padding_default"
+                        android:text="segundos" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="100dp">
+
+                    <TextView
+                        android:layout_column="1"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/common_padding_default"
+                        android:text="Intento 1:" />
+
+                    <EditText
+                        android:id="@+id/etBbr8"
+                        android:layout_column="2"
+                        android:layout_marginEnd="30dp"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:hint="10"
+                        android:inputType="numberDecimal" />
+
+                    <TextView
+                        android:layout_column="3"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/common_padding_default"
+                        android:text="segundos" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvBbr3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="left"
+                    android:text="Prueba de levantarse y sentarse"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:src="@drawable/sentarse" />
+
+                <TextView />
+
+                <TableRow
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="100dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/common_padding_default"
+                        android:text="Tiempo de repeticiones:" />
+
+                    <EditText
+                        android:id="@+id/etBbr10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:hint="10"
+                        android:inputType="numberDecimal" />
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/common_padding_default"
+                        android:text="segundos" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+
+                android:id="@+id/tvRes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/bRes_string" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:src="@drawable/ic_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nestedScroll" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logouaq"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginStart="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/logouaq"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ingenieria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/ingenieria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/enfermeria" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/enfermeria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/enfermeria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

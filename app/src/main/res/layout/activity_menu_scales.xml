@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".MenuScalesActivity">
+
+    <TextView
+        android:id="@+id/tvExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/josefin_bold"
+        android:text=""
+        android:textColor="@color/secondaryColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMenuScale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/josefin_bold"
+        android:gravity="center"
+        android:text="Menú de Escalas"
+        android:textColor="@color/secondaryColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvExp" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:fontFamily="@font/josefin_regular"
+        android:text="Fecha"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/secondaryDarkColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMenuScale" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScales"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/common_padding_default"
+        app:layout_constraintBottom_toTopOf="@id/logouaq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDate">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Riesgo de caídas"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/bTinetti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Escala Tinetti"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/bECR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="ECR de Dontown"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Escalas Ulseras por presión"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/bDinamarca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Escala Dinamarca"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/bNorton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Escala Norton"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/bBraden"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Escala Braden"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Evaluación cognitiva"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/bMinimental"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Minimental"
+
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/bMinicog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Minicog"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/bGDS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="GDS"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/bMoca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="MoCa"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Evaluación funcional"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/bBarthel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Escala Barthel"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/bLawtonNdBrody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Lawton y Brody"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/bKatz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Escala de Katz"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Evaluación Psico-Social"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/bOars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Escala Oars"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/bYesavage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Escala Yesavage"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Fragilidad"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/bFrail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:gravity="center"
+                android:text="Escala Frail"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/bTilbur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:gravity="center"
+                android:text="@string/strSarcf"
+
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvDoBirth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Evaluación Física"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/bBatBr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Batería de breve rendimiento"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/bSFT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="SFT"
+
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvDoNut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Nutricional"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/bMiniN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Mini-nutricional"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvResYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text=""
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:src="@drawable/ic_save"
+        android:id="@+id/bSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_default"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nestedScales"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logouaq"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginStart="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/logouaq"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ingenieria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/ingenieria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/enfermeria" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/enfermeria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/enfermeria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

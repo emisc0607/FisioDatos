@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".FichaDeIdActivity">
+
+    <TextView
+        android:id="@+id/tvExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/secondaryColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/secondaryColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvExp" />
+
+    <TextView
+        android:id="@+id/tvfichaID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/josefin_bold"
+        android:gravity="center"
+        android:text="Ficha de identificación"
+        android:textColor="@color/secondaryColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEmail" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:fontFamily="@font/josefin_medium"
+        android:text="Fecha"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/secondaryDarkColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvfichaID" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedFicha"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/common_padding_default"
+        app:layout_constraintBottom_toTopOf="@id/logouaq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDate">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginVertical="20dp"
+                app:srcCompat="@drawable/user" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bCamera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/common_padding_default"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/josefin_bold"
+                    android:text="Capturar"
+                    app:cornerRadius="3dp" />
+
+                <Button
+                    android:id="@+id/bSelect"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/common_padding_default"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/josefin_bold"
+                    android:text="Guardar imagen"
+                    app:cornerRadius="3dp" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefin_bold"
+                    android:paddingTop="@dimen/common_padding_min"
+                    android:paddingEnd="@dimen/common_padding_min"
+                    android:text="Nombre"
+                    android:textColor="@color/secondaryDarkColor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:hint="Bruce Wayne"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:textColor="@color/secondaryDarkColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvName"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvAge"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefin_bold"
+                    android:paddingTop="@dimen/common_padding_min"
+                    android:paddingEnd="@dimen/common_padding_min"
+                    android:text="Edad"
+                    android:textColor="@color/secondaryDarkColor"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etName" />
+
+                <EditText
+                    android:id="@+id/etAge"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:hint="60"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textColor="@color/secondaryDarkColor"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/tvAge"
+                    app:layout_constraintTop_toBottomOf="@id/etName" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefin_bold"
+                    android:paddingHorizontal="@dimen/common_padding_min"
+                    android:paddingTop="@dimen/common_padding_min"
+                    android:text="años"
+                    android:textColor="@color/secondaryDarkColor"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/etAge"
+                    app:layout_constraintTop_toBottomOf="@id/etName" />
+
+                <TextView
+                    android:id="@+id/tvDoBirth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefin_bold"
+                    android:paddingHorizontal="@dimen/common_padding_min"
+                    android:paddingTop="@dimen/common_padding_min"
+                    android:text="Fecha de nacimento"
+                    android:textColor="@color/secondaryDarkColor"
+                    app:layout_constraintEnd_toStartOf="@id/etDoBirth"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintTop_toBottomOf="@id/etName" />
+
+                <EditText
+                    android:id="@+id/etDoBirth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/secondaryDarkColor"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/josefin_regular"
+                    android:hint="10/11/1929"
+                    android:inputType="date"
+                    android:maxLines="1"
+                    android:paddingEnd="@dimen/common_padding_default"
+                    android:textColor="@color/secondaryDarkColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintTop_toBottomOf="@id/etName" />
+
+                <TextView
+                    android:id="@+id/tvHeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefin_bold"
+                    android:paddingTop="@dimen/common_padding_min"
+                    android:text="Talla"
+                    android:textColor="@color/secondaryDarkColor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etAge" />
+
+                <EditText
+                    android:id="@+id/etHeight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:hint="171.0"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:textColor="@color/secondaryDarkColor"
+                    app:layout_constraintStart_toEndOf="@id/tvHeight"
+                    app:layout_constraintTop_toBottomOf="@id/etAge" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefin_bold"
+                    android:paddingHorizontal="@dimen/common_padding_min"
+                    android:paddingTop="@dimen/common_padding_min"
+                    android:text="cm"
+                    android:textColor="@color/secondaryDarkColor"
+                    app:layout_constraintStart_toEndOf="@id/etHeight"
+                    app:layout_constraintTop_toBottomOf="@id/etAge" />
+
+                <TextView
+                    android:id="@+id/tvWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefin_bold"
+                    android:paddingHorizontal="@dimen/common_padding_min"
+                    android:paddingTop="@dimen/common_padding_min"
+                    android:text="Peso"
+                    android:textColor="@color/secondaryDarkColor"
+                    app:layout_constraintEnd_toStartOf="@id/etWeight"
+                    app:layout_constraintTop_toBottomOf="@id/etAge" />
+
+                <EditText
+                    android:id="@+id/etWeight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:hint="61.4"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:textColor="@color/secondaryDarkColor"
+                    app:layout_constraintEnd_toStartOf="@id/textView15"
+                    app:layout_constraintTop_toBottomOf="@id/etAge" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefin_bold"
+                    android:paddingTop="@dimen/common_padding_min"
+                    android:text="kg"
+                    android:textColor="@color/secondaryDarkColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etAge" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvEmailExp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_bold"
+                android:text="E-mail"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="fisiodatos@gmail.com"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_bold"
+                android:text="Teléfono"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="5550002288"
+                android:inputType="phone"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <TextView
+                android:id="@+id/tvSchool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_bold"
+                android:text="Escolaridad"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etEsc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="Escolaridad"
+                android:inputType="textMultiLine"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <TextView
+                android:id="@+id/tvEdoCivil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_bold"
+                android:text="Estado civil"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etCivil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="Estado Civil"
+                android:inputType="textMultiLine"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <TextView
+                android:id="@+id/tvIllness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="7"
+                android:fontFamily="@font/josefin_bold"
+                android:text="Enfermedad diagnosticada"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etIllness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="Cáncer"
+                android:inputType="textMultiLine"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <TextView
+                android:id="@+id/tvSport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:fontFamily="@font/josefin_bold"
+                android:text="Taller/Deporte"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etSport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="Pintura"
+                android:inputType="textMultiLine"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <TextView
+                android:id="@+id/tvTimeSport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_bold"
+                android:text="Tiempo"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etTimeSport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="2"
+                android:inputType="textMultiLine"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <TextView
+                android:id="@+id/tvNutri"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_bold"
+                android:text="Observaciones de nutrición"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etNutri"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="---"
+                android:inputType="textMultiLine"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/sDent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="Dentadura"
+                        android:textColor="@color/secondaryDarkColor" />
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/sAuxA"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="Auxiliar auditivo"
+                        android:textColor="@color/secondaryDarkColor" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/sAuxM"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="Auxiliar de la marcha"
+                        android:textColor="@color/secondaryDarkColor" />
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/sAuxADVH"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="Auxiliar ADVH"
+                        android:textColor="@color/secondaryDarkColor" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/sIncont"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="Incontinencia"
+                        android:textColor="@color/secondaryDarkColor" />
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/sGlasses"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="Gafas"
+                        android:textColor="@color/secondaryDarkColor" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/sTransC"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="Transtornos de comportamiento"
+                        android:textColor="@color/secondaryDarkColor" />
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/sDetC"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="Deterioro cognitivo"
+                        android:textColor="@color/secondaryDarkColor" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/sUpPres"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="Úlseras por presión"
+                        android:textColor="@color/secondaryDarkColor" />
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/sInmov"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="Inmovilidad"
+                        android:textColor="@color/secondaryDarkColor" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/tvRisC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_bold"
+                android:text="Riesgo de caídas"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbRiscB"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="Bajo"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbRiscM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="Medio"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbRiscA"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="Alto"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvFisio"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:text="Fisioterapia"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryDarkColor"
+
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvFisioOint"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+
+                android:fontFamily="@font/josefin_bold"
+                android:text="Observaciones de intervención"
+
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etFisioOint"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+
+
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+                android:hint="---"
+
+                android:inputType="textMultiLine"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <TextView
+                android:id="@+id/tvFisioEint"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+
+                android:fontFamily="@font/josefin_bold"
+                android:text="Estrategias de intervención"
+
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etFisioEint"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+
+
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+                android:hint="---"
+
+                android:inputType="textMultiLine"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <TextView
+                android:id="@+id/tvEsc"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+
+                android:text=""
+                android:textColor="@color/white"
+
+                />
+
+            <TextView
+                android:id="@+id/tvCivil"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+
+                android:text=""
+                android:textColor="@color/white"
+
+                />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:src="@drawable/ic_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nestedFicha" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logouaq"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginStart="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/logouaq"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ingenieria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/ingenieria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/enfermeria" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/enfermeria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/enfermeria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

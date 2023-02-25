@@ -1,0 +1,1051 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".MocaActivity">
+
+    <TextView
+        android:id="@+id/tvExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/secondaryColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/josefin_bold"
+        android:gravity="center"
+        android:text="@string/strMoca"
+        android:textColor="@color/secondaryColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvExp" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:fontFamily="@font/josefin_medium"
+        android:text="Fecha"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/secondaryDarkColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/common_padding_default"
+        app:layout_constraintBottom_toTopOf="@id/logouaq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDate">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:id="@+id/tableEs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/paragraph_dimen"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="center_vertical"
+                    android:text="@string/string_escolaridad"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etEscolaridad"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:backgroundTint="@color/secondaryDarkColor"
+                    android:ems="3"
+                    android:fontFamily="@font/josefin_regular"
+                    android:hint="@string/strMiniM43"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_padding_min"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tableEs">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:fontFamily="@font/josefin_bold"
+                    android:gravity="center_vertical"
+                    android:text="@string/strMoca1"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/image"
+                    android:layout_marginTop="@dimen/switch_dimen">
+
+                    <TableRow
+                        android:orientation="vertical"
+                        android:padding="@dimen/common_padding_min">
+
+                        <ImageView
+                            android:id="@+id/image1"
+                            android:layout_width="@dimen/evidence_dimen"
+                            android:layout_height="@dimen/evidence_dimen"
+                            android:layout_column="1"
+                            android:src="@drawable/serie"
+                            tools:ignore="ContentDescription" />
+
+                        <LinearLayout
+                            android:layout_column="2"
+                            android:layout_marginStart="@dimen/image"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/josefin_regular"
+                                android:gravity="center_vertical"
+                                android:text="@string/strMoca2"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <CheckBox
+                                android:id="@+id/cbMoca1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:buttonTint="@color/secondaryDarkColor"
+                                android:fontFamily="@font/josefin_regular"
+                                android:text="@string/strMoca3" />
+
+                            <Button
+                                android:id="@+id/bCamera1"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/josefin_regular"
+                                android:text="Capturar" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow android:padding="@dimen/common_padding_min">
+
+                        <ImageView
+                            android:id="@+id/image2"
+                            android:layout_width="@dimen/evidence_dimen"
+                            android:layout_height="@dimen/evidence_dimen"
+                            android:layout_column="1"
+                            android:layout_gravity="center"
+                            android:src="@drawable/cilindro"
+                            tools:ignore="ContentDescription" />
+
+                        <LinearLayout
+                            android:layout_column="2"
+                            android:layout_marginStart="@dimen/image"
+                            android:layout_marginTop="@dimen/switch_dimen"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/cbMoca2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:buttonTint="@color/secondaryDarkColor"
+                                android:fontFamily="@font/josefin_regular"
+                                android:text="@string/strMoca4" />
+
+                            <Button
+                                android:id="@+id/bCamera2"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/josefin_regular"
+                                android:text="Capturar" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow android:padding="@dimen/common_padding_min">
+
+                        <ImageView
+
+                            android:id="@+id/image3"
+                            android:layout_width="@dimen/evidence_dimen"
+                            android:layout_height="@dimen/evidence_dimen"
+                            android:layout_column="1"
+                            android:layout_gravity="center"
+                            android:src="@drawable/reloj"
+                            tools:ignore="ContentDescription" />
+
+                        <LinearLayout
+                            android:layout_column="2"
+                            android:layout_marginStart="@dimen/image"
+                            android:layout_marginTop="@dimen/switch_dimen"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/cbMoca3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:buttonTint="@color/secondaryDarkColor"
+                                android:fontFamily="@font/josefin_regular"
+                                android:text="@string/strMoca5" />
+
+                            <CheckBox
+                                android:id="@+id/cbMoca4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:buttonTint="@color/secondaryDarkColor"
+                                android:fontFamily="@font/josefin_regular"
+                                android:text="@string/strMoca16" />
+
+                            <CheckBox
+                                android:id="@+id/cbMoca5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:buttonTint="@color/secondaryDarkColor"
+                                android:fontFamily="@font/josefin_regular"
+                                android:text="@string/strMoca17" />
+
+                            <Button
+                                android:id="@+id/bCamera3"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/josefin_regular"
+                                android:text="Capturar" />
+                        </LinearLayout>
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/linear1"
+                app:layout_constraintTop_toBottomOf="@id/linear1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:fontFamily="@font/josefin_bold"
+                    android:gravity="center_vertical"
+                    android:text="@string/strMoca6"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/cbMoca6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMoca7" />
+
+                <CheckBox
+                    android:id="@+id/cbMoca7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMoca8" />
+
+                <CheckBox
+                    android:id="@+id/cbMoca8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMoca9" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/linear1"
+                app:layout_constraintTop_toBottomOf="@id/linear2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:fontFamily="@font/josefin_bold"
+                    android:gravity="center_vertical"
+                    android:text="@string/strMoca10"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/switch_dimen"
+                    android:layout_marginBottom="@dimen/switch_dimen"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="center_vertical"
+                    android:text="@string/strMoca11"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/paragraph_dimen"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="center_vertical"
+                    android:text="@string/strMoca12"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/linear1"
+                app:layout_constraintTop_toBottomOf="@id/linear3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:fontFamily="@font/josefin_bold"
+                    android:gravity="center_vertical"
+                    android:text="@string/strMoca19"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/switch_dimen"
+                    android:layout_marginBottom="@dimen/switch_dimen"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="center_vertical"
+                    android:text="@string/strMoca20"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="center_vertical"
+                    android:text="@string/strMoca13"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/cbMoca9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMoca21" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="center_vertical"
+                    android:text="@string/strMoca14"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/cbMoca10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMoca22" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/switch_dimen"
+                    android:layout_marginBottom="@dimen/switch_dimen"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="center_vertical"
+                    android:text="@string/strMoca23"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMoca24"
+                    android:textColor="@color/black" />
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TableRow tools:ignore="UselessParent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefin_regular"
+                            android:gravity="center_vertical"
+                            android:text="@string/strMoca15"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/etMoca1"
+                            android:layout_marginStart="@dimen/default_dimen"
+                            android:backgroundTint="@color/secondaryDarkColor"
+                            android:ems="3"
+                            android:fontFamily="@font/josefin_regular"
+                            android:hint="@string/strMiniM43"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:textAlignment="center" />
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="center_vertical"
+                    android:text="@string/strMoca25"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+
+                <CheckBox
+                    android:id="@+id/cbMoca11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMoca26" />
+
+                <CheckBox
+                    android:id="@+id/cbMoca12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMoca27" />
+
+                <CheckBox
+                    android:id="@+id/cbMoca13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMoca28" />
+
+                <CheckBox
+                    android:id="@+id/cbMoca14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMoca29" />
+
+                <CheckBox
+                    android:id="@+id/cbMoca15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMoca30" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/linear1"
+                app:layout_constraintTop_toBottomOf="@id/linear4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:fontFamily="@font/josefin_bold"
+                    android:gravity="center_vertical"
+                    android:text="@string/strMoca31"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/switch_dimen"
+                    android:layout_marginBottom="@dimen/switch_dimen"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="center_vertical"
+                    android:text="@string/strMoca32"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+
+                <CheckBox
+                    android:id="@+id/cbMoca16"
+                    android:layout_width="550dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMoca33" />
+
+                <CheckBox
+                    android:id="@+id/cbMoca17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMoca34" />
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/switch_dimen"
+                        android:layout_marginBottom="@dimen/switch_dimen"
+                        android:fontFamily="@font/josefin_regular"
+                        android:gravity="center_vertical"
+                        android:text="@string/strMoca35"
+                        android:textColor="@color/secondaryDarkColor"
+                        android:textSize="16sp"
+                        android:textStyle="italic" />
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/josefin_regular"
+                            android:gravity="center_vertical"
+                            android:text="@string/strMoca36"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/etMoca2"
+                            android:layout_marginStart="@dimen/default_dimen"
+                            android:backgroundTint="@color/secondaryDarkColor"
+                            android:ems="3"
+                            android:fontFamily="@font/josefin_regular"
+                            android:hint="@string/strMiniM43"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:textAlignment="center" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/linear1"
+                app:layout_constraintTop_toBottomOf="@id/linear5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:fontFamily="@font/josefin_bold"
+                    android:gravity="center_vertical"
+                    android:text="@string/strMoca37"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/switch_dimen"
+                    android:layout_marginBottom="@dimen/switch_dimen"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="center_vertical"
+                    android:text="@string/strMoca38"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+
+                <CheckBox
+                    android:id="@+id/cbMoca18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMoca39" />
+
+                <CheckBox
+                    android:id="@+id/cbMoca19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMoca40" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/linear1"
+                app:layout_constraintTop_toBottomOf="@id/linear6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:fontFamily="@font/josefin_bold"
+                    android:gravity="center_vertical"
+                    android:text="@string/strMoca41"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/switch_dimen"
+                    android:layout_marginBottom="@dimen/switch_dimen"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="center_vertical"
+                    android:text="@string/strMoca42"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/josefin_regular"
+                        android:gravity="center_vertical"
+                        android:text="@string/strMoca44"
+                        android:textColor="@color/secondaryDarkColor"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbMoca1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/strMoca43" />
+
+                    <RadioButton
+                        android:id="@+id/rbMoca2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/strMoca50" />
+
+                    <RadioButton
+                        android:id="@+id/rbMoca3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/strMoca53" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/josefin_regular"
+                        android:gravity="center_vertical"
+                        android:text="@string/strMoca45"
+                        android:textColor="@color/secondaryDarkColor"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbMoca4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/strMoca43" />
+
+                    <RadioButton
+                        android:id="@+id/rbMoca5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/strMoca50" />
+
+                    <RadioButton
+                        android:id="@+id/rbMoca6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/strMoca53" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/josefin_regular"
+                        android:gravity="center_vertical"
+                        android:text="@string/strMoca46"
+                        android:textColor="@color/secondaryDarkColor"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbMoca7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/strMoca43" />
+
+                    <RadioButton
+                        android:id="@+id/rbMoca8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/strMoca50" />
+
+                    <RadioButton
+                        android:id="@+id/rbMoca9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/strMoca53" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/josefin_regular"
+                        android:gravity="center_vertical"
+                        android:text="@string/strMoca47"
+                        android:textColor="@color/secondaryDarkColor"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbMoca10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/strMoca43" />
+
+                    <RadioButton
+                        android:id="@+id/rbMoca11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/strMoca50" />
+
+                    <RadioButton
+                        android:id="@+id/rbMoca12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/strMoca53" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/josefin_regular"
+                        android:gravity="center_vertical"
+                        android:text="@string/strMoca48"
+                        android:textColor="@color/secondaryDarkColor"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbMoca13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/strMoca43" />
+
+                    <RadioButton
+                        android:id="@+id/rbMoca14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/strMoca50" />
+
+                    <RadioButton
+                        android:id="@+id/rbMoca15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/strMoca53" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/linear1"
+                app:layout_constraintTop_toBottomOf="@id/linear7">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:fontFamily="@font/josefin_bold"
+                    android:gravity="center_vertical"
+                    android:text="@string/strMoca54"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/cbMoca20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMoca55" />
+
+                <CheckBox
+                    android:id="@+id/cbMoca21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMoca56" />
+
+                <CheckBox
+                    android:id="@+id/cbMoca22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMoca57" />
+
+                <CheckBox
+                    android:id="@+id/cbMoca23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMoca58" />
+
+                <CheckBox
+                    android:id="@+id/cbMoca24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMoca59" />
+
+                <CheckBox
+                    android:id="@+id/cbMoca25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/default_dimen"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMoca60" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/default_dimen"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linear8" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/bRes_string"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRes" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:src="@drawable/ic_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nestedScroll" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logouaq"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginStart="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/logouaq"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ingenieria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/ingenieria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/enfermeria" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/enfermeria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/enfermeria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

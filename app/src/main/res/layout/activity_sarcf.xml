@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".SarcfActivity">
+    <TextView
+        android:id="@+id/tvExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/secondaryColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/josefin_bold"
+        android:gravity="center"
+        android:text="@string/strSarcf"
+        android:textColor="@color/secondaryColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvExp" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:fontFamily="@font/josefin_medium"
+        android:text="Fecha"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/secondaryDarkColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/common_padding_default"
+        app:layout_constraintBottom_toTopOf="@id/logouaq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDate">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/rg1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="152dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_dimen"
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="center_vertical"
+                android:text="@string/strSarcf4"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strSarcf5"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/rbSarcf1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strSarcf1" />
+
+            <RadioButton
+                android:id="@+id/rbSarcf2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strSarcf2" />
+
+            <RadioButton
+                android:id="@+id/rbSarcf3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strSarcf3" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/rg2"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rg1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_dimen"
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="center_vertical"
+                android:text="@string/strSarcf6"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strSarcf7"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/rbSarcf4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strSarcf1" />
+
+            <RadioButton
+                android:id="@+id/rbSarcf5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strSarcf2" />
+
+            <RadioButton
+                android:id="@+id/rbSarcf6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strSarcf3" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/rg3"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rg2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_dimen"
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="center_vertical"
+                android:text="@string/strSarcf8"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strSarcf9"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/rbSarcf7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strSarcf1" />
+
+            <RadioButton
+                android:id="@+id/rbSarcf8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strSarcf2" />
+
+            <RadioButton
+                android:id="@+id/rbSarcf9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strSarcf3" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/rg4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rg3">
+
+            <TextView
+                android:id="@+id/tvFrail1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_dimen"
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="center_vertical"
+                android:text="@string/strSarcf10"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strSarcf11"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/rbSarcf10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strSarcf1" />
+
+            <RadioButton
+                android:id="@+id/rbSarcf11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strSarcf2" />
+
+            <RadioButton
+                android:id="@+id/rbSarcf12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strSarcf3" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/rg5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rg4">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_dimen"
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="center_vertical"
+                android:text="@string/strSarcf12"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strSarcf13"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/rbSarcf13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strSarcf1" />
+
+            <RadioButton
+                android:id="@+id/rbSarcf14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strSarcf14" />
+
+            <RadioButton
+                android:id="@+id/rbSarcf15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strSarcf15" />
+
+        </RadioGroup>
+        <TextView
+
+            android:id="@+id/tvRes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/josefin_bold"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:text=""
+            android:textSize="20sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bRes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/josefin_regular"
+            android:text="@string/bRes_string" />
+    </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:src="@drawable/ic_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nestedScroll" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logouaq"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginStart="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/logouaq"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ingenieria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/ingenieria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/enfermeria" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/enfermeria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/enfermeria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

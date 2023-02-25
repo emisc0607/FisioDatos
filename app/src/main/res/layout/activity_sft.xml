@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".SftActivity">
+
+    <TextView
+        android:id="@+id/tvExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/secondaryColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/josefin_bold"
+        android:gravity="center"
+        android:text="@string/senior_fitness_test"
+        android:textColor="@color/secondaryColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvExp" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:fontFamily="@font/josefin_medium"
+        android:text="Fecha"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/secondaryDarkColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="horizontal"
+        android:layout_margin="@dimen/common_padding_default"
+        app:layout_constraintBottom_toTopOf="@id/logouaq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDate">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:layout_marginHorizontal="50dp"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content">
+
+                <TableRow
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:minHeight="70dp"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:layout_column="1"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:ems="3"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="Edad:"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/etAge"
+                        android:layout_column="2"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:ems="3"
+                        android:hint="80"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_column="3"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:ems="3"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="Sexo:"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:layout_column="4"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:hint="10"
+                        android:orientation="horizontal"
+                        android:textAlignment="center"
+                        android:textSize="14sp">
+
+                        <RadioButton
+                            android:id="@+id/rbSex1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/secondaryDarkColor"
+                            android:fontFamily="@font/josefin_regular"
+                            android:text="Hombre" />
+
+                        <RadioButton
+                            android:id="@+id/rbSex2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/secondaryDarkColor"
+                            android:fontFamily="@font/josefin_regular"
+                            android:text="Mujer" />
+                    </RadioGroup>
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_marginHorizontal="50dp"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content">
+
+                <TableRow
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/primaryDarkColor"
+                    android:fitsSystemWindows="true"
+                    android:gravity="center_horizontal"
+                    android:minHeight="40dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:ems="8"
+                        android:fontFamily="@font/josefin_bold"
+                        android:gravity="center"
+                        android:text="@string/strSft1"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="16sp"
+                        tools:textAlignment="center" />
+
+                    <TextView
+                        android:layout_column="2"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:ems="8"
+                        android:fontFamily="@font/josefin_bold"
+                        android:gravity="center"
+                        android:text="@string/strSft2"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="16sp"
+                        tools:textAlignment="center" />
+
+                    <TextView
+                        android:layout_column="3"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:fontFamily="@font/josefin_bold"
+                        android:gravity="center"
+                        android:text="@string/strSft3"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="16sp"
+                        tools:textAlignment="center" />
+
+                    <TextView
+                        android:layout_column="4"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:fontFamily="@font/josefin_bold"
+                        android:gravity="center"
+                        android:text="@string/strSft4"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="16sp"
+                        tools:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:minHeight="70dp">
+
+                    <TextView
+                        android:layout_column="1"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:ems="8"
+                        android:fontFamily="@font/josefin_bold"
+                        android:text="@string/strSft5"
+                        android:textColor="@color/secondaryDarkColor" />
+
+                    <TextView
+                        android:id="@+id/tvSft1"
+                        android:layout_column="2"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:ems="8"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/strSft6"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/etSft1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:ems="3"
+                        android:hint="@string/hint_rep_string"
+                        android:importantForAutofill="no"
+                        android:inputType="number|numberDecimal"
+                        android:maxLength="6"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/etSft2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="4"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:ems="3"
+                        android:hint="@string/hint_rep_string"
+                        android:importantForAutofill="no"
+                        android:inputType="number|numberDecimal"
+                        android:maxLength="6"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:minHeight="70dp">
+
+                    <TextView
+                        android:layout_column="1"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:ems="8"
+                        android:fontFamily="@font/josefin_bold"
+                        android:text="@string/strSft7"
+                        android:textColor="@color/secondaryDarkColor" />
+
+                    <TextView
+                        android:id="@+id/tvSft2"
+                        android:layout_column="2"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:ems="8"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/strSft8"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/etSft3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:ems="3"
+                        android:hint="@string/hint_rep_string"
+                        android:importantForAutofill="no"
+                        android:inputType="number|numberDecimal"
+                        android:maxLength="6"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/etSft4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="4"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:ems="3"
+                        android:hint="@string/hint_rep_string"
+                        android:importantForAutofill="no"
+                        android:inputType="number|numberDecimal"
+                        android:maxLength="6"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:minHeight="70dp">
+
+                    <TextView
+                        android:layout_column="1"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:ems="8"
+                        android:fontFamily="@font/josefin_bold"
+                        android:text="@string/strSft17"
+                        android:textColor="@color/secondaryDarkColor" />
+
+                    <TextView
+                        android:id="@+id/tvSft3"
+                        android:layout_column="2"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:ems="8"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/strSft18"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/etSft13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:ems="3"
+                        android:hint="@string/hint_rep_string"
+                        android:importantForAutofill="no"
+                        android:inputType="number|numberDecimal|numberSigned"
+                        android:maxLength="6"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/etSft14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="4"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:ems="3"
+                        android:hint="@string/hint_rep_string"
+                        android:importantForAutofill="no"
+                        android:inputType="number|numberDecimal|numberSigned"
+                        android:maxLength="6"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:minHeight="70dp">
+
+                    <TextView
+                        android:layout_column="1"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:ems="8"
+                        android:fontFamily="@font/josefin_bold"
+                        android:text="@string/strSft9"
+                        android:textColor="@color/secondaryDarkColor" />
+
+                    <TextView
+                        android:id="@+id/tvSft4"
+                        android:layout_column="2"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:ems="8"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/strSft10"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/etSft5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:ems="3"
+                        android:hint="@string/hint_rep_string"
+                        android:inputType="number|numberDecimal|numberSigned"
+                        android:maxLength="6"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        tools:ignore="Autofill" />
+
+                    <EditText
+                        android:id="@+id/etSft6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="4"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:ems="3"
+                        android:hint="@string/hint_rep_string"
+                        android:importantForAutofill="no"
+                        android:inputType="number|numberDecimal|numberSigned"
+                        android:maxLength="6"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:minHeight="110dp">
+
+                    <TextView
+                        android:layout_column="1"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:ems="8"
+                        android:fontFamily="@font/josefin_bold"
+                        android:text="@string/strSft11"
+                        android:textColor="@color/secondaryDarkColor" />
+
+                    <TextView
+                        android:id="@+id/tvSft5"
+                        android:layout_column="2"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:ems="8"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/strSft12"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/etSft7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:ems="3"
+                        android:hint="@string/hint_rep_string"
+                        android:importantForAutofill="no"
+                        android:inputType="numberSigned|number|numberDecimal"
+                        android:maxLength="6"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/etSft8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="4"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:ems="3"
+                        android:hint="@string/hint_rep_string"
+                        android:importantForAutofill="no"
+                        android:inputType="numberSigned|number|numberDecimal"
+                        android:maxLength="6"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:minHeight="90dp">
+
+                    <TextView
+                        android:layout_column="1"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:ems="8"
+                        android:fontFamily="@font/josefin_bold"
+                        android:text="@string/strSft13"
+                        android:textColor="@color/secondaryDarkColor" />
+
+                    <TextView
+                        android:id="@+id/tvSft6"
+                        android:layout_column="2"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:ems="8"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/strSft14"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/etSft9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:ems="3"
+                        android:hint="@string/hint_rep_string"
+                        android:importantForAutofill="no"
+                        android:inputType="numberSigned|number|numberDecimal"
+                        android:maxLength="6"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/etSft10"
+                        android:layout_column="4"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:ems="3"
+                        android:hint="@string/hint_rep_string"
+                        android:importantForAutofill="no"
+                        android:inputType="numberSigned|number|numberDecimal"
+                        android:maxLength="6"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:minHeight="70dp">
+
+                    <TextView
+                        android:layout_column="1"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:ems="8"
+                        android:fontFamily="@font/josefin_bold"
+                        android:text="@string/strSft15"
+                        android:textColor="@color/secondaryDarkColor" />
+
+                    <TextView
+                        android:id="@+id/tvSft7"
+                        android:layout_column="2"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:ems="8"
+                        android:text="@string/strSft16"
+                        android:textStyle="italic" />
+
+                    <EditText
+                        android:id="@+id/etSft11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:ems="3"
+                        android:hint="@string/hint_rep_string"
+                        android:importantForAutofill="no"
+                        android:inputType="number|numberDecimal|numberSigned"
+                        android:maxLength="6"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/etSft12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="4"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:ems="3"
+                        android:hint="@string/hint_rep_string"
+                        android:importantForAutofill="no"
+                        android:inputType="number|numberDecimal|numberSigned"
+                        android:maxLength="6"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+                </TableRow>
+
+
+            </TableLayout>
+            <TextView
+
+                android:id="@+id/tvRes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/josefin_bold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:text=""
+                android:textSize="20sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/bRes_string" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:src="@drawable/ic_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nestedScroll" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logouaq"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginStart="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/logouaq"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ingenieria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/ingenieria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/enfermeria" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/enfermeria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/enfermeria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

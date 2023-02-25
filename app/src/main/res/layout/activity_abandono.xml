@@ -1,0 +1,2366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".AbandonoActivity">
+
+    <TextView
+        android:id="@+id/tvExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/secondaryColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvIA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/josefin_bold"
+        android:gravity="center"
+        android:text="@string/strAbandono"
+        android:textColor="@color/secondaryColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvExp" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:fontFamily="@font/josefin_medium"
+        android:text="Fecha"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/secondaryDarkColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvIA" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedAbandono"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/common_padding_default"
+        app:layout_constraintBottom_toTopOf="@id/logouaq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvIA">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity=""
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb1"
+                android:textColor="@color/secondaryDarkColor"
+                app:autoSizeMaxTextSize="@dimen/text_margin" />
+
+            <RadioGroup
+                android:id="@+id/rg1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb2"
+                android:textColor="@color/secondaryDarkColor"
+                app:autoSizeMaxTextSize="@dimen/text_margin" />
+
+            <RadioGroup
+                android:id="@+id/rg2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb3"
+                android:textColor="@color/secondaryDarkColor"
+                app:autoSizeMaxTextSize="@dimen/text_margin" />
+
+            <RadioGroup
+                android:id="@+id/rg3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb4"
+                android:textColor="@color/secondaryDarkColor"
+                app:autoSizeMaxTextSize="@dimen/text_margin" />
+
+            <RadioGroup
+                android:id="@+id/rg4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb5"
+                android:textColor="@color/secondaryDarkColor"
+                app:autoSizeMaxTextSize="@dimen/text_margin" />
+
+            <RadioGroup
+                android:id="@+id/rg5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb6"
+                android:textColor="@color/secondaryDarkColor"
+                app:autoSizeMaxTextSize="@dimen/text_margin"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg6"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb7"
+                android:textColor="@color/secondaryDarkColor"
+                app:autoSizeMaxTextSize="@dimen/text_margin"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg7"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb8"
+                android:textColor="@color/secondaryDarkColor"
+                app:autoSizeMaxTextSize="@dimen/text_margin"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg8"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb9"
+                android:textColor="@color/secondaryDarkColor"
+                app:autoSizeMaxTextSize="@dimen/text_margin"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg9"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Indicadores de violencia física"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="228dp"
+                tools:layout_editor_absoluteY="31dp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb10"
+                android:textColor="@color/secondaryDarkColor"
+                app:autoSizeMaxTextSize="@dimen/text_margin" />
+
+            <RadioGroup
+                android:id="@+id/rg10"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb11"
+                android:textColor="@color/secondaryDarkColor"
+                app:autoSizeMaxTextSize="@dimen/text_margin"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg11"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP11"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA11"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV11"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb12"
+                android:textColor="@color/secondaryDarkColor"
+                app:autoSizeMaxTextSize="@dimen/text_margin"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg12"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP12"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA12"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV12"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb13"
+                android:textColor="@color/secondaryDarkColor"
+                app:autoSizeMaxTextSize="@dimen/text_margin"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg13"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP13"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA13"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV13"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb14"
+                android:textColor="@color/secondaryDarkColor"
+                app:autoSizeMaxTextSize="@dimen/text_margin"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg14"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb15"
+                android:textColor="@color/secondaryDarkColor"
+                app:autoSizeMaxTextSize="@dimen/text_margin"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg15"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP15"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA15"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV15"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb16"
+                android:textColor="@color/secondaryDarkColor"
+                app:autoSizeMaxTextSize="@dimen/text_margin"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg16"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP16"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA16"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV16"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb17"
+                android:textColor="@color/secondaryDarkColor"
+                app:autoSizeMaxTextSize="@dimen/text_margin"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg17"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP17"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA17"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV17"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb18"
+                android:textColor="@color/secondaryDarkColor"
+                app:autoSizeMaxTextSize="@dimen/text_margin"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg18"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP18"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA18"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV18"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb19"
+                android:textColor="@color/secondaryDarkColor"
+                app:autoSizeMaxTextSize="@dimen/text_margin"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg19"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP19"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA19"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV19"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Indicadores de violencia psicológica"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="228dp"
+                tools:layout_editor_absoluteY="31dp" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb20"
+                android:textColor="@color/secondaryDarkColor"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg20"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb21"
+                android:textColor="@color/secondaryDarkColor"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg21"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP21"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA21"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV21"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb22"
+                android:textColor="@color/secondaryDarkColor"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg22"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP22"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA22"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV22"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb23"
+                android:textColor="@color/secondaryDarkColor"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg23"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP23"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA23"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV23"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb24"
+                android:textColor="@color/secondaryDarkColor"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg24"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP24"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA24"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV24"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb25"
+                android:textColor="@color/secondaryDarkColor"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg25"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP25"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA25"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV25"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb26"
+                android:textColor="@color/secondaryDarkColor"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg26"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP26"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA26"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV26"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb27"
+                android:textColor="@color/secondaryDarkColor"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg27"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP27"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA27"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV27"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb28"
+                android:textColor="@color/secondaryDarkColor"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg28"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP28"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA28"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV28"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb29"
+                android:textColor="@color/secondaryDarkColor"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg29"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP29"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA29"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV29"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb30"
+                android:textColor="@color/secondaryDarkColor"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg30"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV30"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb31"
+                android:textColor="@color/secondaryDarkColor"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg31"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP31"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA31"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV31"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+
+            <TextView
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Indicadores de violencia sexual"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="228dp"
+                tools:layout_editor_absoluteY="31dp" />
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb32"
+                android:textColor="@color/secondaryDarkColor"
+                app:autoSizeMaxTextSize="@dimen/text_margin"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg32"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP32"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA32"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV32"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb33"
+                android:textColor="@color/secondaryDarkColor"
+                app:autoSizeMaxTextSize="@dimen/text_margin"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg33"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP33"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="@string/str_presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA33"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="@string/str_ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV33"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="@string/str_no_valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb34"
+                android:textColor="@color/secondaryDarkColor"
+                app:autoSizeMaxTextSize="@dimen/text_margin" />
+
+            <RadioGroup
+                android:id="@+id/rg34"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP34"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA34"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV34"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb35"
+                android:textColor="@color/secondaryDarkColor"
+                app:autoSizeMaxTextSize="@dimen/text_margin" />
+
+            <RadioGroup
+                android:id="@+id/rg35"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP35"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA35"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV35"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="top"
+                android:text="@string/strAb36"
+                android:textColor="@color/secondaryDarkColor"
+                app:autoSizeMaxTextSize="@dimen/text_margin" />
+
+            <RadioGroup
+                android:id="@+id/rg36"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cbAbP36"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Presente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbA36"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="Ausente"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@+id/cbAbnV36"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:gravity="top"
+                    android:text="No valorable"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvConclusion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="@string/indab_conclusion"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etConclusion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="---------"
+                android:inputType="textMultiLine"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:src="@drawable/ic_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nestedAbandono" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logouaq"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginStart="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/logouaq"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ingenieria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/ingenieria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/enfermeria" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/enfermeria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/enfermeria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

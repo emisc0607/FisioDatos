@@ -1,0 +1,2424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".HistoryActivity">
+
+    <TextView
+        android:id="@+id/tvExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/secondaryColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/secondaryColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvExp" />
+
+    <TextView
+        android:id="@+id/tvMenuScale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/josefin_bold"
+        android:gravity="center"
+        android:text="@string/history_string_title"
+        android:textColor="@color/secondaryColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEmail" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:fontFamily="@font/josefin_medium"
+        android:text="Fecha"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/secondaryDarkColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMenuScale" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedHistory"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/common_padding_default"
+        app:layout_constraintBottom_toTopOf="@id/logouaq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDate">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvH1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_dimen"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/exp_fecha_de_primer_valoracion"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etFirstDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:clickable="false"
+                android:focusable="false"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/first_date"
+                android:inputType="date"
+                android:maxLines="1"
+                android:paddingEnd="@dimen/default_dimen"
+                android:textAlignment="textEnd" />
+
+
+            <TextView
+                android:id="@+id/tvH2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/exp_name"
+
+
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:enabled="true"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="Nombre" />
+
+            <TextView
+                android:id="@+id/tvH3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:text="Edad"
+
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:enabled="true"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="60"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/tvH4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/exp_sex"
+
+                android:textColor="@color/secondaryDarkColor" />
+
+            <TextView
+                android:id="@+id/tvSex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:text=""
+
+                android:textColor="@color/secondaryDarkColor" />
+
+            <RadioGroup
+                android:id="@+id/rg1"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbSex1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="Masculino"
+                    android:textColor="@color/secondaryDarkColor" />
+
+                <RadioButton
+                    android:id="@id/rbSex2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="Femenino"
+                    android:textColor="@color/secondaryDarkColor" />
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/tvH5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_dimen"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/exp_lugar_de_nacimiento"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPlaceObirth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:enabled="true"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="---" />
+
+            <TextView
+                android:id="@+id/tvH6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_dimen"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/exp_fecha_de_nacimiento"
+
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etDoBirth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+
+                android:focusable="false"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="10/11/29"
+                android:inputType="date"
+                android:maxLines="1" />
+
+
+            <TextView
+                android:id="@+id/tvH7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/switch_dimen"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/exp_escolaridad"
+                android:textColor="@color/secondaryDarkColor" />
+            <TextView
+                android:id="@+id/tvEsc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:textSize="20sp"
+                android:text=""
+                android:textColor="@color/secondaryDarkColor" />
+
+
+
+            <Spinner
+                android:id="@+id/sEsc"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular" />
+
+            <TextView
+                android:id="@+id/tvH8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/switch_dimen"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/exp_estado_civil"
+                android:textColor="@color/secondaryDarkColor" />
+            <TextView
+                android:id="@+id/tvCivil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text=""
+                android:textSize="20sp"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <Spinner
+                android:id="@+id/sEdoCivil"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular" />
+
+            <TextView
+                android:id="@+id/tvH9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_dimen"
+
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/exp_numero_de_habitacion"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etNumHab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:enabled="true"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="60"
+                android:inputType="number"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvH10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginEnd="@dimen/default_dimen"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/exp_ocupacion"
+
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etOcupation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:enabled="true"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="---" />
+
+
+            <TextView
+                android:id="@+id/tvH11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_dimen"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/exp_lugar_habitual"
+
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etUsualPlace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:enabled="true"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="---" />
+
+
+            <TextView
+                android:id="@+id/tvH12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_dimen"
+
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/exp_cuidador_responsable"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etCaretaker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:backgroundTint="@color/secondaryDarkColor"
+
+                android:enabled="true"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="---" />
+
+
+            <TextView
+                android:id="@+id/tvH13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="center"
+                android:text="@string/exp_signos_vitales"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp"
+                tools:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tvH14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:paddingEnd="@dimen/default_dimen"
+                android:text="@string/exp_temperatura"
+
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etTemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:enabled="true"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="36.0"
+                android:inputType="number|numberDecimal" />
+
+            <TextView
+                android:id="@+id/tvH15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/exp_talla"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:enabled="true"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="160"
+                android:inputType="number|numberDecimal" />
+
+            <TextView
+                android:id="@+id/tvH16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_dimen"
+                android:fontFamily="@font/josefin_regular"
+
+                android:text="@string/exp_peso"
+
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:enabled="true"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="60"
+                android:inputType="number|numberDecimal" />
+
+
+            <TextView
+                android:id="@+id/tvH17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/exp_ta"
+
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etTA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:enabled="true"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="120/80"
+                android:inputType="text|number"
+                android:paddingEnd="@dimen/default_dimen" />
+
+            <TextView
+                android:id="@+id/tvH18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/exp_fc"
+
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etFC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+                android:enabled="true"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="70"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/tvH19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+
+                android:text="@string/exp_fr"
+
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etFR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:enabled="true"
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="8"
+                android:inputType="number" />
+
+
+            <TextView
+                android:id="@+id/tvH20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/exp_imc"
+
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etIMC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:enabled="true"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="20.5"
+                android:inputType="number|numberDecimal" />
+
+            <TextView
+                android:id="@+id/tvH21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_dimen"
+                android:fontFamily="@font/josefin_regular"
+
+                android:text="@string/exp_apetito"
+
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/eteApetito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+                android:enabled="true"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="---"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/tvH22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+
+                android:text="@string/exp_sed"
+
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etSed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:enabled="true"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="---"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/tvH23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="center"
+                android:text="@string/exp_antecendentes_hf"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp"
+                tools:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tvH24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="@string/exp_patologia"
+                android:textColor="@color/secondaryDarkColor"
+
+                android:visibility="gone"
+                tools:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvH25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+
+                android:gravity="center"
+                android:text="@string/exp_familiar"
+                android:textColor="@color/secondaryDarkColor"
+
+                android:visibility="gone"
+                tools:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvH35"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+
+                android:gravity="center"
+                android:paddingStart="@dimen/common_padding_middle"
+                android:text="Observaciones"
+                android:textColor="@color/secondaryDarkColor"
+
+                android:visibility="gone"
+                tools:textStyle="bold" />
+
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/sAntHfam1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/common_padding_default"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/illness_tuberculosis"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etFam1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_familiar"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etFamO1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sAntHfam2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/common_padding_default"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/illness_hipertension"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etFam2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_familiar"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etFamO2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sAntHfam3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/common_padding_default"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/illness_diabetes"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etFam3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_familiar"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etFamO3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sAntHfam4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/common_padding_default"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/illness_infarto_al_miocardio"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etFam4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_familiar"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etFamO4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+            <CheckBox
+                android:id="@+id/sAntHfam5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/common_padding_default"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/illness_demencia"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etFam5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_familiar"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etFamO5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sAntHfam6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/common_padding_default"
+                android:buttonTint="@color/secondaryDarkColor"
+
+                android:fontFamily="@font/josefin_regular"
+
+                android:text="@string/illness_cancer"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etFam6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_familiar"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etFamO6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sAntHfam7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/common_padding_default"
+                android:buttonTint="@color/secondaryDarkColor"
+
+                android:fontFamily="@font/josefin_regular"
+
+                android:text="@string/illness_otro"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etFam7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_familiar"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etFamO7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/tvH34"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="center"
+                android:text="@string/exp_antecedentes_p"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp"
+                tools:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tvH26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="@string/exp_patologia"
+                android:textColor="@color/secondaryDarkColor"
+
+                android:visibility="gone"
+
+
+                tools:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvH27"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:gravity="center"
+                android:text="Tiempo"
+                android:textColor="@color/secondaryDarkColor"
+
+                android:visibility="gone"
+                tools:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvH36"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+
+                android:paddingStart="@dimen/common_padding_middle"
+                android:text="Observaciones"
+                android:textColor="@color/secondaryDarkColor"
+
+                android:visibility="gone"
+                tools:textStyle="bold" />
+
+
+            <CheckBox
+                android:id="@+id/sPat1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/illness_tuberculosis"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPat1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="Tiempo"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPatO1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sPat2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/illness_hipertension"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPat2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="Tiempo"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPatO2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sPat3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/illness_diabetes"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPat3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="Tiempo"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPatO3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sPat4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/illness_dislipidemias"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPat4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="Tiempo"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPatO4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+            <CheckBox
+                android:id="@+id/sPat5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/illness_demencia"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPat5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="Tiempo"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPatO5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+            <CheckBox
+                android:id="@+id/sPat6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/illness_cancer"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPat6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="Tiempo"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPatO6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+            <CheckBox
+                android:id="@+id/sPat7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/illness_osteoartritis"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPat7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="Tiempo"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPatO7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sPat8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/illness_avc"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPat8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="Tiempo"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPatO8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sPat9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/illness_cardiovascular"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPat9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="Tiempo"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPatO9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sPat10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/illness_transfusiones"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPat10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="Tiempo"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPatO10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sPat11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/illness_dolor"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPat11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="Tiempo"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPatO11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+            <CheckBox
+                android:id="@+id/sPat12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/illness_caidas"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPat12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="Tiempo"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPatO12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+            <CheckBox
+                android:id="@+id/sPat13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/illness_hepatitis"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPat13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="Tiempo"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPatO13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+            <CheckBox
+                android:id="@+id/sPat14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/illness_hospitalizaciones"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPat14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="Tiempo"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPatO14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+            <CheckBox
+                android:id="@+id/sPat15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/illness_otro"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPat15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="Tiempo"
+                android:inputType="text"
+                android:visibility="gone" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etPatO15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/tvH28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="center"
+                android:text="@string/antecedentes_pNp"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp"
+                tools:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tvH37"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+
+                android:gravity="center"
+                android:text="@string/exp_observaciones"
+                android:textColor="@color/secondaryDarkColor"
+
+                android:visibility="gone"
+
+
+                tools:textStyle="bold" />
+
+
+            <CheckBox
+                android:id="@+id/sNoPat1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/ant_alimentacion"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etNoPat1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+            <CheckBox
+                android:id="@+id/sNoPat2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/ant_dentadura"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etNoPat2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sNoPat3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/ant_audicion"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etNoPat3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+            <CheckBox
+                android:id="@+id/sNoPat4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/ant_vision"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etNoPat4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+            <CheckBox
+                android:id="@+id/sNoPat5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/ant_actividad_fisica"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etNoPat5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+            <CheckBox
+                android:id="@+id/sNoPat6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/ant_pasatiempos_y_vicios"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etNoPat6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+            <CheckBox
+                android:id="@+id/sNoPat7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/ant_conocimiento_del_entorno"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etNoPat7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+            <CheckBox
+                android:id="@+id/sNoPat8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/ant_medicamentos"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etNoPat8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+                <TextView
+                android:id="@+id/tvH29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="center"
+                android:text="@string/exp_aparato_sistema"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp"
+
+
+                tools:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvH30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+
+                android:gravity="center"
+                android:text="@string/exp_observaciones"
+                android:textColor="@color/secondaryDarkColor"
+
+                android:visibility="gone"
+
+
+                tools:textStyle="bold" />
+
+
+            <CheckBox
+                android:id="@+id/sExpSistem1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/ant_cardiovascular"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etExpSistem1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+            <CheckBox
+                android:id="@+id/sExpSistem2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/ant_respiratorio"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etExpSistem2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+            <CheckBox
+                android:id="@+id/sExpSistem3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/ant_digestivo"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etExpSistem3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+            <CheckBox
+                android:id="@+id/sExpSistem4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/ant_genitourinario"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etExpSistem4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+            <CheckBox
+                android:id="@+id/sExpSistem5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/ant_hormonal_endocrino"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etExpSistem5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sExpSistem6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/ant_nervioso"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etExpSistem6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+            <CheckBox
+                android:id="@+id/sExpSistem7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/ant_piel"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+
+                android:id="@+id/etExpSistem7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <TextView
+                android:id="@+id/tvH31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="center"
+                android:text="@string/exp_problemas_geriatricos"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp"
+
+
+                tools:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tvH32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="@string/exp_sindrome_problema"
+                android:textColor="@color/secondaryDarkColor"
+
+                android:visibility="gone"
+
+
+                tools:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvH33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+
+                android:gravity="center"
+                android:text="@string/exp_observaciones"
+                android:textColor="@color/secondaryDarkColor"
+
+                android:visibility="gone"
+
+
+                tools:textStyle="bold" />
+
+
+            <CheckBox
+                android:id="@+id/sSindromes1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/obs_vertigo_mareo"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etSindromes1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sSindromes2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/obs_delirio"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etSindromes2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+            <CheckBox
+                android:id="@+id/sSindromes3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/obs_deterioro_cognitivo"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etSindromes3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sSindromes4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/obs_sincopes"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etSindromes4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sSindromes5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/obs_fragilidad"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etSindromes5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sSindromes6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/obs_dolor_cronico"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etSindromes6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sSindromes7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/obs_debilidad_auditiva"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etSindromes7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sSindromes8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/obs_debilidad_visual"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etSindromes8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sSindromes9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/obs_insomnio"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etSindromes9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sSindromes10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/obs_polifarmacia"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etSindromes10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sSindromes11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/obs_incontinencia_urinaria"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etSindromes11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sSindromes12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/obs_estrenimiento"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etSindromes12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sSindromes13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/obs_ulceras_por_presion"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etSindromes13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sSindromes14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/obs_inmovilidad"
+                android:textColor="@color/secondaryDarkColor"
+
+
+                />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etSindromes14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sSindromes15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/obs_auxiliar_de_marcha"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etSindromes15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sSindromes16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/illness_caidas"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etSindromes16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sSindromes17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/obs_fracturas"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etSindromes17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <CheckBox
+                android:id="@+id/sSindromes18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+
+
+                android:text="@string/obs_desnutricion"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText  android:selectAllOnFocus="true"
+                android:id="@+id/etSindromes18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryDarkColor"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="@string/exp_observaciones"
+                android:inputType="text" />
+
+
+            <TextView
+                android:id="@+id/tvRes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/default_dimen"
+                android:layout_marginEnd="@dimen/default_dimen"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:src="@drawable/ic_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nestedHistory" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logouaq"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginStart="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/logouaq"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ingenieria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/ingenieria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/enfermeria" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/enfermeria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/enfermeria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

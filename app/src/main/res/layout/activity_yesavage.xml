@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".YesavageActivity">
+
+    <TextView
+        android:id="@+id/tvExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/secondaryColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/josefin_bold"
+        android:gravity="center"
+        android:text="@string/ScaleYes"
+        android:textColor="@color/secondaryColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvExp" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:fontFamily="@font/josefin_medium"
+        android:text="Fecha"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/secondaryDarkColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/common_padding_default"
+        app:layout_constraintBottom_toTopOf="@id/logouaq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDate">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/josefin_bold"
+                android:text="@string/InstrYes"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp" />
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sSyes1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+
+                android:fontFamily="@font/josefin_regular"
+                android:text="En general, ¿Está satisfecho(a) con su vida?" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sSyes2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+
+                android:fontFamily="@font/josefin_regular"
+                android:text="¿Ha abandonado muchas de sus tareas habituales y aficiones?" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sSyes3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+
+                android:fontFamily="@font/josefin_regular"
+                android:text="¿Siente que su vida está vacía?" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sSyes4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+
+                android:fontFamily="@font/josefin_regular"
+                android:text="¿Se siente con frecuencia aburrido(a)?" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sSyes5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+
+                android:fontFamily="@font/josefin_regular"
+                android:text="¿Se encuantra de buen humor la mayor parte del tiempo?" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sSyes6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+
+                android:fontFamily="@font/josefin_regular"
+                android:text="¿Teme que algo malo pueda ocurrirle?" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sSyes7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+
+                android:fontFamily="@font/josefin_regular"
+                android:text="¿Se siente feliz la mayor parte del tiempo?" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sSyes8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+
+                android:fontFamily="@font/josefin_regular"
+                android:text="¿Con frecuencia se siente desamparado (a), desprotegido (a)?" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sSyes9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+
+                android:fontFamily="@font/josefin_regular"
+                android:text="¿Prefiere usted quedarse en casa, más que que sair y hacer cosas nuevas?" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sSyes10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+
+                android:fontFamily="@font/josefin_regular"
+                android:text="¿Cree que tiene más problemas de memoria que la mayoria de la gente?" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sSyes11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+
+                android:fontFamily="@font/josefin_regular"
+                android:text="¿En estos momentos, piensa que es estupendo estar vivo(a)?" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sSyes12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+
+                android:fontFamily="@font/josefin_regular"
+                android:text="¿Actualmente se siente un(a) inútil?" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sSyes13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+
+                android:fontFamily="@font/josefin_regular"
+                android:text="¿Se siente lleno(a) de energía?" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sSyes14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+
+                android:fontFamily="@font/josefin_regular"
+                android:text="¿Se siente sin esperanza en este momento?" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sSyes15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+
+                android:fontFamily="@font/josefin_regular"
+                android:text="¿Piensa que la mayoria de la gente está en mejor situación que ustéd?" />
+
+            <TextView
+
+                android:id="@+id/tvRes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/josefin_bold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:text=""
+                android:textSize="20sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/bRes_string" />
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:src="@drawable/ic_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nestedScroll" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logouaq"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginStart="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/logouaq"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ingenieria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/ingenieria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/enfermeria" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/enfermeria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/enfermeria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

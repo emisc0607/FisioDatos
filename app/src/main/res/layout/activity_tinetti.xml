@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".tinettiActivity">
+    <TextView
+        android:id="@+id/tvExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/secondaryColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/josefin_bold"
+        android:gravity="center"
+        android:text="@string/escala_tinetti"
+        android:textColor="@color/secondaryColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvExp" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:fontFamily="@font/josefin_medium"
+        android:text="Fecha"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/secondaryDarkColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTin" />
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedTinetti"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/common_padding_default"
+        app:layout_constraintBottom_toTopOf="@id/logouaq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDate">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTin2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="center"
+                android:text="EQUILIBRIO\nINSTRUCCIONES: El paciente debe estar sentado en una silla sin descansa brazos."
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTin3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="left"
+                android:text="Equilibrio sentado"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Se inclina o se desliza en la silla"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Firme y seguro"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Incapaz sin ayuda"  android:fontFamily="@font/josefin_regular"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvTin4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="left"
+                android:text="Levantarse"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:orientation="vertical">
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Capaz utilizando los brazos como ayuda"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Capaz de levantarse con un intento"  android:fontFamily="@font/josefin_regular"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvTin5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="left"
+                android:text="Intentos de levantarse"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:orientation="vertical">
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Incapaz sin ayuda"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Capaz utilizando los brazos como ayuda"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Capaz de levantarse con un intento"  android:fontFamily="@font/josefin_regular"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvTin6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="left"
+                android:text="Equilibrio inmediato al levantarse"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:orientation="vertical">
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Inestable (se tambalea, mueve los pies, etc.)"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Estable, pero usa andador, bastón, muletas u otros objetos"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Estable sin usar bastón u otros soportes"  android:fontFamily="@font/josefin_regular"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvTin7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="left"
+                android:text="Equilibrio en bipedestación"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:orientation="vertical">
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Inestable"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Estable con aumento del área de sustentación   o usa bastón, andador u otro soporte"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Base de sustentación estrecha sin ningún soporte"  android:fontFamily="@font/josefin_regular"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvTin8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="left"
+                android:text="Empujón (sujeto en posición firme con los pies lo mas juntos posible: el examinador empuja sobre el esternón de paciente con la palma 3 veces)"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:orientation="vertical">
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Tiende a caerse"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Se tambalea, se sujeta, pero se mantiene solo"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Firme"  android:fontFamily="@font/josefin_regular"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvTin9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="left"
+                android:text="Ojos cerrados"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:orientation="vertical">
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Inestable"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Estable"  android:fontFamily="@font/josefin_regular"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvTin10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="left"
+                android:text="Giro de 360°"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:orientation="vertical">
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Pasos discontinuos"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Pasos continuos"  android:fontFamily="@font/josefin_regular"/>
+            </RadioGroup>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:orientation="vertical">
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Inestable (se agarra o tambalea)"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Estable"  android:fontFamily="@font/josefin_regular"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvTin11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="left"
+                android:text="Sentarse"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:orientation="vertical">
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Inseguro"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Usa los brazos o no tiene un movimiento suave"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin26"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Seguro, movimiento suave"  android:fontFamily="@font/josefin_regular"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvTin12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="center"
+                android:text="MARCHA"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTin13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="left"
+                android:text="Comienza la marcha (inmediatamente después de decir ''camine'')"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:orientation="vertical">
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin27"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Duda o vacila, o múltiples intentos para comenzar"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin28"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="No vacilante"  android:fontFamily="@font/josefin_regular"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvTin14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="left"
+                android:text="Longitud y altura del paso"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tvTin22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+                android:gravity="left"
+                android:text="Longitud"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="14sp"
+                android:textStyle="italic|bold"  android:fontFamily="@font/josefin_regular"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:orientation="vertical">
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin29"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="El pie derecho no sobrepasa al izquierdo con el paso en la fase de balanceo"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="El pie derecho sobrepasa al izquierdo"  android:fontFamily="@font/josefin_regular"/>
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:orientation="vertical">
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin33"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="El pie izquierdo no sobrepasa al derecho con el paso en la fase de balanceo"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin34"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="El pie izquierdo sobrepasa al derecho"  android:fontFamily="@font/josefin_regular"/>
+            </RadioGroup>
+            <TextView
+                android:id="@+id/tvTin21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+                android:gravity="left"
+                android:text="Altura"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="14sp"
+                android:textStyle="bold|italic"  android:fontFamily="@font/josefin_regular"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:orientation="vertical">
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="El pie derecho no se levanta completamente del suelo con el paso en la fase de balanceo"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin32"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="El pie derecho se levanta completamente"  android:fontFamily="@font/josefin_regular"/>
+            </RadioGroup>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:orientation="vertical">
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin35"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="El pie izquierdo no se levanta completamente del suelo con el paso en la fase de balanceo"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin36"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="El pie izquierdo se levanta completamente"  android:fontFamily="@font/josefin_regular"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvTin15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="left"
+                android:text="Simetría del paso"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:orientation="vertical">
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin37"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="La longitud del paso con el pie derecho e izquierdo es diferente (estimada)"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin38"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Los pasos son iguales en longitud"  android:fontFamily="@font/josefin_regular"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvTin16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="left"
+                android:text="Continuidad de los pasos"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:orientation="vertical">
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin39"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Para o hay discontinuidad entre pasos"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin40"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Los pasos son continuos"  android:fontFamily="@font/josefin_regular"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvTin17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="left"
+                android:text="Trayectoria (estimada en relación con los baldosines del suelo de 30 cm de diámetro; se observa la desviación de un pie en 3 cm de distancia)"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:orientation="vertical">
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin41"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Marcada desviación"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin42"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Desviación moderada o media, o utiliza ayuda"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin43"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Derecho sin utilizar ayudas"  android:fontFamily="@font/josefin_regular"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvTin18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="left"
+                android:text="Tronco"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:orientation="vertical">
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin44"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Marcado balanceo o utiliza ayudas"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin45"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="No balanceo, pero hay flexión de rodillas o espalda o extensión hacia fuera de los brazos"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin46"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="No balanceo, ni flexión, ni utiliza ayudas"  android:fontFamily="@font/josefin_regular"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvTin20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="left"
+                android:text="Postura en la marcha"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:orientation="vertical">
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin47"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Talones separados"  android:fontFamily="@font/josefin_regular"/>
+
+                <RadioButton android:buttonTint="@color/secondaryDarkColor"
+                    android:id="@+id/rbTin48"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Talones casi se tocan mientras camina"  android:fontFamily="@font/josefin_regular"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvRes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/josefin_bold"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text="Resultado"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:src="@drawable/ic_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nestedTinetti" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logouaq"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginStart="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/logouaq"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ingenieria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/ingenieria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/enfermeria" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/enfermeria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/enfermeria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

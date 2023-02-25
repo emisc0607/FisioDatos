@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "595523829276",
+    "project_id": "fisiodatostry",
+    "storage_bucket": "fisiodatostry.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595523829276:android:b49726668da8449a18e9d9",
+        "android_client_info": {
+          "package_name": "com.emisc0607.activityfisiodatostest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "595523829276-odh3ph3sgeattgcvleuikr8dl9is4om8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpTGsBMxkozF33V0VwZfc3eaYZuUra-Mo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "595523829276-odh3ph3sgeattgcvleuikr8dl9is4om8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

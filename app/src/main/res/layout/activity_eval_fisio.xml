@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".EvalFisioActivity">
+
+    <TextView
+        android:id="@+id/tvExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/secondaryColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEvalF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/josefin_bold"
+        android:gravity="center"
+        android:text="@string/exp_evaluacion_fisio"
+        android:textColor="@color/secondaryColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvExp" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:fontFamily="@font/josefin_medium"
+        android:text="Fecha"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/secondaryDarkColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEvalF" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedFisio"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/common_padding_default"
+        app:layout_constraintBottom_toTopOf="@id/logouaq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEvalF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_bold"
+                android:text="@string/evf_motivo_de_consulta"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etMotivC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="---"
+                android:inputType="textMultiLine"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_bold"
+                android:text="@string/evf_exploracion_fisica"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/evf_inspeccion_y_palpacion"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etExpfisica1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="---"
+                android:inputType="textMultiLine"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/evf_movilidad_articular"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etExpfisica2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="---"
+                android:inputType="textMultiLine"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/evf_fuerza_muscular"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etExpfisica3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="---"
+                android:inputType="textMultiLine"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/evf_sensibilidad_y_reflejos"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etExpfisica4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="---"
+                android:inputType="textMultiLine"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/evf_pruebas_especificas"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etExpfisica5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="---"
+                android:inputType="textMultiLine"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/evf_analisis_de_postura"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etExpfisica6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="---"
+                android:inputType="textMultiLine"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/evf_analisis_de_marcha"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etExpfisica7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="---"
+                android:inputType="textMultiLine"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="center"
+                android:text="@string/evf_diagnostico_funcional"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etEvalFdia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="CIF   Autonomía   Dependencia/Independencia"
+                android:inputType="textMultiLine"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/evf_intervencion_objetivos"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etIntObj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="---"
+                android:inputType="textMultiLine"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/evf_intervencion_estrategias"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etIntStrat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="---"
+                android:inputType="textMultiLine"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/exp_observaciones"
+                android:textColor="@color/secondaryDarkColor" />
+
+            <EditText
+                android:id="@+id/etObservations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:hint="---"
+                android:inputType="textMultiLine"
+
+
+                android:textColor="@color/secondaryDarkColor" />
+
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="center"
+                android:text="@string/evf_tratamiento"
+
+                android:textAlignment="center"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etEvalF_trat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefin_regular"
+                android:hint="---"
+                android:inputType="textMultiLine"
+
+
+                android:textColor="@color/secondaryDarkColor" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:src="@drawable/ic_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nestedFisio" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logouaq"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginStart="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/logouaq"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ingenieria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/ingenieria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/enfermeria" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/enfermeria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/enfermeria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

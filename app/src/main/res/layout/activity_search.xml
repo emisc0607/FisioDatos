@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SearchActivity">
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageButton
+        android:id="@+id/ibBack"
+        android:layout_width="42dp"
+        android:layout_height="62dp"
+        android:layout_gravity="left"
+        android:layout_marginEnd="550dp"
+        android:background="#FFFFFF"
+        android:src="@drawable/back"/>
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha"
+        android:layout_marginHorizontal="100dp"
+        android:textAlignment="viewEnd"/>
+    <TextView
+        android:id="@+id/tvExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfView"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:layout_margin="10dp" />
+    <Button
+        android:id="@+id/bShare"
+        style="@style/Widget.AppCompat.ButtonBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="200dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#beddd5"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="Compartir"
+        android:background="#beddd5"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+</TableLayout>
+
+</LinearLayout>

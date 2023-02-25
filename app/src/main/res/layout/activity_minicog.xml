@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MinicogActivity">
+    <TextView
+        android:id="@+id/tvExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/secondaryColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/josefin_bold"
+        android:gravity="center"
+        android:text="@string/strMiniC"
+        android:textColor="@color/secondaryColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvExp" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:fontFamily="@font/josefin_medium"
+        android:text="Fecha"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/secondaryDarkColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/common_padding_default"
+        app:layout_constraintBottom_toTopOf="@id/logouaq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDate">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/table1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniC1"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <TableRow
+                    android:layout_marginStart="@dimen/image">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/string_palabra_1"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/etP1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:hint="@string/string_hint1"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:paddingHorizontal="@dimen/default_dimen" />
+
+                    <CheckBox
+                        android:id="@+id/cb1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/right_cb_string" />
+                </TableRow>
+                <TableRow
+                    android:layout_marginStart="@dimen/image">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/string_palabra_2"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/etP2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:hint="@string/string_hint2"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:paddingHorizontal="@dimen/default_dimen" />
+
+                    <CheckBox
+                        android:id="@+id/cb2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/right_cb_string" />
+                </TableRow>
+                <TableRow
+                    android:layout_marginStart="@dimen/image">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/string_palabra_3"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/etP3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:hint="@string/string_hint3"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:paddingHorizontal="@dimen/default_dimen" />
+
+                    <CheckBox
+                        android:id="@+id/cb3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/right_cb_string" />
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+                app:layout_constraintTop_toBottomOf="@id/table1"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/table2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_dimen"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniC2"
+                    android:textColor="@color/secondaryDarkColor"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <TableRow
+                    android:layout_marginStart="@dimen/image">
+                    <ImageView
+                        android:layout_column="2"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/reloj"
+                        android:layout_gravity="center"
+                        tools:ignore="ContentDescription" />
+
+                    <CheckBox
+                        android:id="@+id/cb4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:layout_marginTop="@dimen/image"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/right_cb_string" />
+                </TableRow>
+                <LinearLayout
+                    android:gravity="center_horizontal">
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:layout_width="@dimen/evidence_dimen"
+                        android:layout_height="@dimen/evidence_dimen"/>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/bCamera1"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="Capturar" />
+            </TableLayout>
+            <TextView
+                android:id="@+id/tvRes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/default_dimen"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/table2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/default_dimen"
+                android:text="@string/bRes_string"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRes"
+                android:fontFamily="@font/josefin_regular" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:src="@drawable/ic_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nestedScroll" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logouaq"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginStart="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/logouaq"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ingenieria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/ingenieria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/enfermeria" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/enfermeria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/enfermeria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

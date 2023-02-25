@@ -1,0 +1,749 @@
+<resources xmlnstools="http//schemas.android.com/tools">
+    <string name="app_name">FisioDatos</string>
+    <string name="title_activity_escalas">EscalasActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="action_settings">Settings</string>
+    <string name="ScaleYes">Escala Yesavage</string>
+    <string name="InstrYes">
+        INSTRUCCIONES\n
+        Vea directamente a la persona, logres us atención y expliquele
+        Le voy a hacer algunas preguntas para evaluar si estado de ánimo,
+        tome en cuanta únicamente como se ha sentido durante la última semana,
+        por favor responda con SÍ o NO.\n
+        Hágale a la persona las preguntas de la Escala de Depresión Geriátrica en el orden indicado a continuación\n
+    </string>
+    <string name="InstrTin">
+        OBJETIVO\n
+        Determinar el factor de riesgo de caídas en el adulto mayor de manera precoz,
+        dentro del año posterior a su aplicación.\n
+        INSTRUCCIONES\n
+        La escala cuenta con 2 partes, las cuales toman en cuenta los elementos de EQUILIBRIO y los de MARCHA.\n
+        Previamente se el evaluador se le acerca al paciente con la interrogante ¿teme usted caerse?
+        el cual es indicativo de un predictivo de hasta el 63% si la respuesta es afirmativa. \n
+        Durante la realización de la prueba, el examinador debe mantenerse de pie junto al paciente/sujeto a evaluar,
+        ya sea atrás o frente y a su derecha.
+    </string>
+
+    <string name="strBar1">Comer</string>
+    <string name="strBar2">Capaz de utilizar cualquier instrumento necesario</string>
+    <string name="strBar3">Para cortar carne, untar mantequilla, come solo</string>
+    <string name="strBar4">Necesita ser alimentado por otra persona</string>
+    <string name="strBar5">Lavarse - bañarse</string>
+    <string name="strBar6">Capaz de lavarse entero</string>
+    <string name="strBar7">Necesita ayuda o supervisión</string>
+    <string name="strBar8">Vestirse</string>
+    <string name="strBar9">Capaz de quitarse y ponerse la ropa</string>
+    <string name="strBar10">Realizar solo la mitad de las tareas</string>
+    <string name="strBar11">Necesita ayuda</string>
+    <string name="strBar12">Arreglarse/aseo personal</string>
+    <string name="strBar13">Realiza todas las actividades personales</string>
+    <string name="strBar14">Necesita ayuda o supervisión</string>
+    <string name="strBar15">Deposición</string>
+    <string name="strBar16">Ningún episodio de incontinencia</string>
+    <string name="strBar17">Menos de una vez por semana, uso de supositorios</string>
+    <string name="strBar18">Incluye administración de enemas o supositorios</string>
+    <string name="strBar19">Micción</string>
+    <string name="strBar20">Ningún episodio de incontinencia</string>
+    <string name="strBar21">Menos de una vez por semana, uso de supositorios</string>
+    <string name="strBar22">Incluye administración de enemas o supositorios</string>
+    <string name="strBar23">Ir al retrete</string>
+    <string name="strBar24">Entra y sale solo, limpiarse, capaz de sentarse y levantarse</string>
+    <string name="strBar25">Necesita ayuda, limpiarse solo, aun puede utilizar el retrete</string>
+    <string name="strBar26">Incapaz de manejarse sin asistencia mayor</string>
+    <string name="strBar27">Trasladarse sillón/cama</string>
+    <string name="strBar28">Sin ayuda en todas las fases</string>
+    <string name="strBar29">Incluye supervisión</string>
+    <string name="strBar30">Sentado sin ayuda, pero con asistencia</string>
+    <string name="strBar31">Necesita ayuda, incapaz de permanecer sentado</string>
+    <string name="strBar32">Deambulación</string>
+    <string name="strBar33">Puede caminar al menos 50 metros con auxiliar de la marcha</string>
+    <string name="strBar34">Supervisión o pequeña ayuda física</string>
+    <string name="strBar35">En 50m, debe desplazarse, atravesar puertas</string>
+    <string name="strBar36">Si utiliza silla de ruedas debe ser empujado por otro</string>
+    <string name="strBar37">Subir y bajar escaleras</string>
+    <string name="strBar38">Capaz de subir y bajar un piso sin ayuda</string>
+    <string name="strBar39">Supervisión física o verbal</string>
+    <string name="strBar40">Incapaz de salvar escalones</string>
+
+    <string name="strLaw1">Capacidad para usar el teléfono </string>
+    <string name="strLaw2">Utiliza el teléfono por iniciativa propia</string>
+    <string name="strLaw3">Es capaz de marcar bien algunos números familiares</string>
+    <string name="strLaw4">Es capaz de contestar el teléfono, pero no de marcar</string>
+    <string name="strLaw5">No utiliza el teléfono</string>
+    <string name="strLaw6">Hacer compras</string>
+    <string name="strLaw7">Realiza todas las compras necesarias independientemente</string>
+    <string name="strLaw8">Realiza independientemente pequeñas compras</string>
+    <string name="strLaw9">Necesita ir acompañado para realizar cualquier compra</string>
+    <string name="strLaw10">Totalmente incapaz de comprar</string>
+    <string name="strLaw11">Preparación de la comida</string>
+    <string name="strLaw12">Organiza, prepara y sirve las comidas por sí solo adecuadamente</string>
+    <string name="strLaw13">Prepara adecuadamente las comidas si les proporcionan los ingredientes</string>
+    <string name="strLaw14">Prepara, calienta y sirve la comida, pero no sigue una dieta adecuada</string>
+    <string name="strLaw15">Necesita que le preparen y sirvan las comidas</string>
+    <string name="strLaw16">Cuidado de la casa</string>
+    <string name="strLaw17" toolsignore="Typos">Mantiene la casa solos o con ayuda ocasional</string>
+    <string name="strLaw18">Realiza tareas ligeras, como lavar los platos o hacer las camas</string>
+    <string name="strLaw19">Realiza tareas ligeras, pero no puede mantener un adecuado nivel de limpieza</string>
+    <string name="strLaw20">Necesita ayuda en todas las labores de la casa</string>
+    <string name="strLaw21">No participa en ninguna labor de la casa</string>
+    <string name="strLaw22">Lavado de la ropa</string>
+    <string name="strLaw23">Lava por sí solo toda su ropa</string>
+    <string name="strLaw24">Lava por sí solo pequeñas prendas</string>
+    <string name="strLaw25">Todo el lavado de ropa deber ser realizado por otro</string>
+    <string name="strLaw26">Uso de medios de transporte </string>
+    <string name="strLaw27">Viaja solo en transporte público o conduce su propio coche</string>
+    <string name="strLaw28">Es capaz de coger un taxi, pero no usa otro medio de trasporte</string>
+    <string name="strLaw29">Viaja en transporte publico cuando va acompañado de otra persona</string>
+    <string name="strLaw30">Utiliza el taxi o el automóvil solo con ayuda de otros</string>
+    <string name="strLaw31">No viaja en absoluto</string>
+    <string name="strLaw32">Responsabilidad respecto a su medicación</string>
+    <string name="strLaw33">Es capaz de tomar su medicamento a la hora y dosis completa</string>
+    <string name="strLaw34">Toma su medicación si la dosis es preparada previamente</string>
+    <string name="strLaw35">No es capaz de administrar su medicamento</string>
+    <string name="strLaw36">Manejo de sus asuntos económicos</string>
+    <string name="strLaw37">Se encarga de sus asuntos económicos por sí solo</string>
+    <string name="strLaw38">Realiza las compras de cada día, pero necesita ayuda en las grandes compras, bancos</string>
+    <string name="strLaw39">Incapaz de manejar dinero</string>
+
+    <string name="strKat1">Lavado</string>
+    <string name="strKat2">No recibe ayuda (entra y sale solo de la bañera si esta es la forma habitual de bañarse)</string>
+    <string name="strKat3">Recibe ayuda en la limpieza de una sola parte de su cuerpo (espalda o piernas, por ejemplo)</string>
+    <string name="strKat4">Recibe ayuda en el aseo de más de una parte de su cuerpo</string>
+    <string name="strKat5">Vestido</string>
+    <string name="strKat6">Toma la ropa y se viste completamente sin ayuda</string>
+    <string name="strKat7">Se viste sin ayuda excepto para atarse los zapatos</string>
+    <string name="strKat8">Recibe ayuda para coger la ropa y ponérsela o permanece parcialmente vestido</string>
+    <string name="strKat9">Uso de retrete</string>
+    <string name="strKat10">Va al retrete, se limpia y se ajusta la ropa sin ayuda puede usar bastón, andador y silla de ruedas</string>
+    <string name="strKat11">Recibe ayuda para ir al retrete, limpiarse, ajustarse la ropa o en el uso nocturno del orinal</string>
+    <string name="strKat12">No va al retrete</string>
+    <string name="strKat13">Movilización</string>
+    <string name="strKat14">Entra y sale de la cama, se sienta y se levanta sin ayuda (puede usar bastón o andador)</string>
+    <string name="strKat15">Entra y sale de la cama, se sienta y se levanta con ayuda</string>
+    <string name="strKat16">No se levanta de la cama</string>
+    <string name="strKat17">Continencia</string>
+    <string name="strKat18">Control completo de ambos esfínteres</string>
+    <string name="strKat19" toolsignore="Typos">Incontinencia ocasional</string>
+    <string name="strKat20">Necesita supervisión. Usa sonda vesical o es incontinente</string>
+    <string name="strKat21">Alimentación</string>
+    <string name="strKat22">Sin ayuda</string>
+    <string name="strKat23">Ayuda solo para cortar la carne o untar el pan</string>
+    <string name="strKat24">Necesita ayuda para comer o es alimentado parcial o completamente usando sonda o fluidos intravenosos</string>
+
+    <string name="strOars1">¿Cuál es su estado civil?</string>
+    <string name="strOars2">Soltero</string>
+    <string name="strOars3">Casado</string>
+    <string name="strOars4">Viudo</string>
+    <string name="strOars5">Separado</string>
+    <string name="strOars6">¿Vive su cónyuge en la residencia?</string>
+    <string name="strOars7">Si</string>
+    <string name="strOars8">No</string>
+    <string name="strOars9">Durante el último año, ¿Con qué frecuencia salió de la residencia para visitar a la familia o amigos en fines de semana o vacaciones, de compras o de excursión?</string>
+    <string name="strOars10">Una vez a la semana o más</string>
+    <string name="strOars11">Una a tres veces al mes</string>
+    <string name="strOars12">Menos de una vez al mes o solo en vacaciones</string>
+    <string name="strOars13">Nunca</string>
+    <string name="strOars14">¿Con cuántas personas tiene la suficiente confianza para visitarlos en su casa?</string>
+    <string name="strOars15">Cinco o más</string>
+    <string name="strOars16">Tres o cuatro</string>
+    <string name="strOars17">Una o dos</string>
+    <string name="strOars18">Ninguna</string>
+    <string name="strOars19">¿Cuántas veces habló (amigos, familiares u otros) por teléfono durante la última semana? Si la persona no tiene teléfono la pregunta también es valida</string>
+    <string name="strOars20">Una vez al día o más</string>
+    <string name="strOars21">Dos veces</string>
+    <string name="strOars22">Una vez</string>
+    <string name="strOars23">Ninguna</string>
+    <string name="strOars24">¿Cuántas veces de la semana pasada le visitó alguien que no vive con usted, fue usted de visita o realizó alguna actividad con otra persona?</string>
+    <string name="strOars25">Una vez al día o más</string>
+    <string name="strOars26">De dos a seis veces</string>
+    <string name="strOars27">Una vez</string>
+    <string name="strOars28">Ninguna</string>
+    <string name="strOars29">¿Hay alguna persona en la que tenga confianza?</string>
+    <string name="strOars30">Si</string>
+    <string name="strOars31">No</string>
+    <string name="strOars32">¿Con qué frecuencia se siente solo?</string>
+    <string name="strOars33">Bastante a menudo</string>
+    <string name="strOars34">Algunas veces</string>
+    <string name="strOars35">Casi nunca</string>
+    <string name="strOars36">Nunca</string>
+    <string name="strOars37">¿Ve a sus familiares y amigos tan a menudo como quisiera o algunas veces está triste por lo poco que vienen a verle?</string>
+    <string name="strOars38">Tan a menudo como deseo</string>
+    <string name="strOars39">Algunas veces me siento triste por lo poco que vienen</string>
+    <string name="strOars40">¿Hay alguien que le ayudaría en cualquier cosa si se pusiera enfermo o quedara incapacitado? (marido, Mujer, Familiar, Amigo)</string>
+    <string name="strOars41">Si</string>
+    <string name="strOars42">Nadie</string>
+    <string name="strOars43">Si es si ¿Hay alguien que cuidaría de usted tanto tiempo como lo necesitase o sólo por un corto espacio de tiempo u ocasionalmente?</string>
+    <string name="strOars44">Alguien cuidaría de mi indefinidamente</string>
+    <string name="strOars45">Alguien me cuidaría durante breve espacio de tiempo</string>
+    <string name="strOars46">Alguien me ayudaría de vez en cuando</string>
+
+    <string name="logo_uaq">Logo UAQ</string>
+    <string name="save">Guardar</string>
+    <string name="resultado">Resultado</string>
+    <string name="escala_oars">Escala OARS</string>
+    <string name="bot_n_back">Botón regresar</string>
+    <string name="bateryBr">Batería de breve rendimiento</string>
+
+    <string name="strSft1">Prueba</string>
+    <string name="strSft2">Descripción</string>
+    <string name="strSft3">Intento 1</string>
+    <string name="strSft4">Intento 2</string>
+    <string name="strSft5">Sentarse y levantarse en una silla</string>
+    <string name="strSft6">Repeticiones en 30 seg</string>
+    <string name="strSft7">Flexiones del brazo</string>
+    <string name="strSft8">Repeticiones en 30 seg</string>
+    <string name="strSft9">2 minutos de marcha</string>
+    <string name="strSft10">Número de pasos (d-i) durante 2 min</string>
+    <string name="strSft11">Flexión de tronco en silla</string>
+    <string name="strSft12">Distancia de los dedos hasta el zapato (0 neutro, + sobrepasan los dedos, - no alcanza)</string>
+    <string name="strSft13">Juntar las manos tras la espalda</string>
+    <string name="strSft14">Distancia entre los dedos (0 alcanza, + sobrepasa, - no alcanza)</string>
+    <string name="strSft15">Levantarse, caminar y volverse a sentar</string>
+    <string name="strSft16">Tiempo </string>
+    <string name="strSft17">Test de caminar 6 minutos</string>
+    <string name="strSft18">Número de vueltas x 45,7 m</string>
+    <string name="bRes_string">Resultado</string>
+    <string name="bSave_string">Guardar</string>
+    <string name="bBack_string">Back</string>
+    <string name="mininutricional_string">Mininutricional</string>
+    <string name="logo_uaq_string">Logo UAQ</string>
+
+    <string name="strMiniN1">Cribaje</string>
+    <string name="strMiniN2">¿Ha perdido apetito?</string>
+    <string name="strMiniN3">Ha comido mucho menos</string>
+    <string name="strMiniN4">Ha comido menos</string>
+    <string name="strMiniN5">Ha comido igual</string>
+    <string name="strMiniN6">Pérdida reciente de peso (mayor a 3 meses)</string>
+    <string name="strMiniN7">Pérdida de peso >3 kg</string>
+    <string name="strMiniN8">No lo sabe</string>
+    <string name="strMiniN9">Pérdida de peso entre 1 y 3 kg</string>
+    <string name="strMiniN10">No ha habido pérdida de peso</string>
+    <string name="strMiniN11">Movilidad</string>
+    <string name="strMiniN12">De la cama al sillón</string>
+    <string name="strMiniN13">Autonomía en el interior</string>
+    <string name="strMiniN14">Sale del domicilio</string>
+    <string name="strMiniN15">¿Enfermedad aguda o estrés psicológico\nen los últimos 3 meses?</string>
+    <string name="strMiniN16">Sí</string>
+    <string name="strMiniN17">No</string>
+    <string name="strMiniN18">Problemas neuropsicológicos</string>
+    <string name="strMiniN19">Demencia o depresión grave</string>
+    <string name="strMiniN20">Demencia moderada</string>
+    <string name="strMiniN21">Sin problemas psicológicos</string>
+    <string name="strMiniN22">IMC</string>
+    <string name="strMiniN23">Evaluación</string>
+    <string name="strMiniN24">Independencia en el domicilio</string>
+    <string name="strMiniN25">Sí</string>
+    <string name="strMiniN26">No</string>
+    <string name="strMiniN27">Más de 3 medicamentos al día</string>
+    <string name="strMiniN28">Sí</string>
+    <string name="strMiniN29">No</string>
+    <string name="strMiniN30">Úlceras o lesiones cutáneas</string>
+    <string name="strMiniN31">Sí</string>
+    <string name="strMiniN32">No</string>
+    <string name="strMiniN33">Comidas completas al día</string>
+    <string name="strMiniN34">1 comida</string>
+    <string name="strMiniN35">2 comidas</string>
+    <string name="strMiniN36">3 comidas</string>
+    <string name="strMiniN37">¿Qué consume el paciente?</string>
+    <string name="strMiniN38">1 elemento</string>
+    <string name="strMiniN39">2 elementos</string>
+    <string name="strMiniN40">3 elementos</string>
+    <string name="strMiniN41">Consumo de frutas y verduras</string>
+    <string name="strMiniN42">No</string>
+    <string name="strMiniN43">Sí</string>
+    <string name="strMiniN44">Vasos de agua u otros líquidos al día</string>
+    <string name="strMiniN45">Menos de 3 vasos</string>
+    <string name="strMiniN46">De 3 a 5 vasos</string>
+    <string name="strMiniN47">Más de 5 vasos</string>
+    <string name="strMiniN48">Forma de alimentarse</string>
+    <string name="strMiniN49">Necesita ayuda</string>
+    <string name="strMiniN50">Se alimenta solo con dificultad</string>
+    <string name="strMiniN51">Se alimenta solo sin dificultad</string>
+    <string name="strMiniN52">Se considera el paciente bien nutrido</string>
+    <string name="strMiniN53">Malnutrición grave</string>
+    <string name="strMiniN54">No lo sabe o malnutrición moderada</string>
+    <string name="strMiniN55">Sin problemas de nutrición</string>
+    <string name="strMiniN56">Cómo se encuentra en su estado de salud</string>
+    <string name="strMiniN57">Peor</string>
+    <string name="strMiniN58">No lo sabe</string>
+    <string name="strMiniN59">Igual</string>
+    <string name="strMiniN60">Mejor</string>
+    <string name="strMiniN61">Circunferencia braquial</string>
+    <string name="strMiniN62">Circunferencia pantorrilla</string>
+    <string name="strMiniN63">CB</string>
+    <string name="strMiniN64">CP</string>
+    <string name="strMiniN65">---</string>
+
+    <string name="minimental_string">Minimental</string>
+    <string name="strMiniM1">Orientación</string>
+    <string name="strMiniM2">Temporal</string>
+    <string name="strMiniM3">Fecha</string>
+    <string name="strMiniM4">Hora</string>
+    <string name="strMiniM5">Mes</string>
+    <string name="strMiniM6">Día de la semana</string>
+    <string name="strMiniM7">Año</string>
+    <string name="strMiniM8">Estación</string>
+    <string name="strMiniM9">Espacial</string>
+    <string name="strMiniM10">Lugar</string>
+    <string name="strMiniM11">Piso</string>
+    <string name="strMiniM12">Ciudad</string>
+    <string name="strMiniM13">Estado</string>
+    <string name="strMiniM14">País</string>
+    <string name="strMiniM15">Repetición inmediata</string>
+    <string name="strMiniM16">Número de repeticiones</string>
+    <string name="strMiniM17">Atención y cálculo</string>
+    <string name="strMiniM18">Serial 7 (100 menos 7)</string>
+    <string name="strMiniM19">93</string>
+    <string name="strMiniM20">86</string>
+    <string name="strMiniM21">79</string>
+    <string name="strMiniM22">72</string>
+    <string name="strMiniM23">65</string>
+    <string name="strMiniM24">Deletrear MUNDO al revés</string>
+    <string name="strMiniM25">O</string>
+    <string name="strMiniM26">D</string>
+    <string name="strMiniM27">N</string>
+    <string name="strMiniM28">U</string>
+    <string name="strMiniM29">M</string>
+    <string name="strMiniM30">Memoria</string>
+    <string name="strMiniM31">Lenguaje</string>
+    <string name="strMiniM32">Lápiz</string>
+    <string name="strMiniM33">Reloj</string>
+    <string name="strMiniM34">Repetir una frase</string>
+    <string name="strMiniM35">Orden</string>
+    <string name="strMiniM36">Tome este papel con su mano derecha\n
+        Dóblelo por la mitad con ambas manos\n
+        Déjelo en el suelo</string>
+    <string name="strMiniM39">Leer y obedecer</string>
+    <string name="strMiniM40">Cierre los ojos</string>
+    <string name="strMiniM41">Escribir una frase (con sujeto, verbo, predicado)</string>
+    <string name="strMiniM42">Copiar los pentágonos</string>
+    <string name="right_cb_string">Correcta</string>
+    <string name="string_palabra_1">Palabra 1</string>
+    <string name="string_palabra_2">Palabra 2</string>
+    <string name="string_hint1">Mesa</string>
+    <string name="string_hint2">Árbol</string>
+    <string name="string_palabra_3">Palabra 3</string>
+    <string name="string_hint3">Perro</string>
+    <string name="strMiniM43">6</string>
+    <string name="strMiniM44">Mostrar un</string>
+    <string name="strMiniM45">El paciente debe nombrarlos</string>
+    <string name="strMiniM46">Pedir que repita las 3 palabras previas</string>
+    <string name="escala_moca">Escala Moca</string>
+    <string name="escala_gds">Geriatric Depression Scale</string>
+    <string name="strGDS2">En general, ¿está satisfecho con su vida?</string>
+    <string name="strGDS3">¿Ha abandonado muchas de sus tareas habituales y aficiones?</string>
+    <string name="strGDS4">¿Siente que su vida está vacía?</string>
+    <string name="strGDS5">¿Se siente con frecuencia aburrido(a)?</string>
+    <string name="strGDS6">¿Se encuentra de buen humor la mayor parte del tiempo?</string>
+    <string name="strGDS7">Teme que algo malo pueda ocurrirle?</string>
+    <string name="strGDS8">¿Se siente feliz la mayor parte del tiempo?</string>
+    <string name="strGDS9">¿Con frecuencia se siente desamparado(a), desprotegido(a)?</string>
+    <string name="strGDS10">¿Prefiere quedarse en casas, más que salir y hacer cosas nuevas?</string>
+    <string name="strGDS11">¿Cree que tiene más problemas de memoria que la mayoría de la gente?</string>
+    <string name="strGDS12">¿En estos momentos, piensa que es estupendo estar vivo(a)?</string>
+    <string name="strGDS13">¿Actualmente se siente un(a) inútil?</string>
+    <string name="strGDS14">¿Se siente lleno(a) de energía?</string>
+    <string name="strGDS15">¿Se siente sin esperanza en este momento?</string>
+    <string name="strGDS16">¿Piensa que la mayoría de la gente está en mejor situación que usted?</string>
+
+    <string name="strFrail1">Fatiga</string>
+    <string name="strFrail2">En las últimas 4 semanas, ¿Qué tanto tiempo se sintió fatigado?</string>
+    <string name="strFrail3">Todo el tiempo</string>
+    <string name="strFrail4">La mayor parte del tiempo</string>
+    <string name="strFrail5">Algo de tiempo</string>
+    <string name="strFrail6">Muy poco tiempo</string>
+    <string name="strFrail7">Nada de tiempo</string>
+    <string name="strFrail8">Resistencia</string>
+    <string name="strFrail9">Sin ningún auxiliar como bastón o andadera, ¿tiene dificultad para subir 10 escalones?</string>
+    <string name="strFrail10">Si</string>
+    <string name="strFrail11">No</string>
+    <string name="strFrail12">Actividad aeróbica</string>
+    <string name="strFrail13">Sin ningún auxiliar como bastón o andadera, ¿tiene dificultad para caminar 100m (dos cuadras) sin descansar?</string>
+    <string name="strFrail14">Si</string>
+    <string name="strFrail15">No</string>
+    <string name="strFrail16">Enfermedades</string>
+    <string name="strFrail17">Algún doctor o medico le ha comentado que tiene</string>
+    <string name="strFrail18">Hipertensión arterial sistémica</string>
+    <string name="strFrail19">Diabetes</string>
+    <string name="strFrail20">Cáncer</string>
+    <string name="strFrail21">Enfermedad pulmonar crónica</string>
+    <string name="strFrail22">Cardiopatía isquémica</string>
+    <string name="strFrail23">Insuficiencia cardiaca congestiva</string>
+    <string name="strFrail24">Angina</string>
+    <string name="strFrail25">Asma</string>
+    <string name="strFrail26">Artritis</string>
+    <string name="strFrail27">Enfermedad vascular cerebral</string>
+    <string name="strFrail28">Enfermedad renal crónica</string>
+    <string name="strFrail29">Pérdida de peso</string>
+    <string name="strFrail30">¿Cuánto pesa con su ropa sin zapatos?</string>
+    <string name="strFrail31">Hace un año ¿Cuánto pesaba con ropa y sin zapatos?</string>
+    <string name="strFrail">FRAIL</string>
+    <string name="string_kg">kg</string>
+    <string name="string_weight_rand">20.0</string>
+
+    <string name="strMoca">Evaluación Cognitiva Montreal</string>
+    <string name="strMoca1">Visuoespacial/Ejecutiva</string>
+    <string name="strMoca2">Seguir la secuencia</string>
+    <string name="strMoca3">1 A 2 B 3 C 4 D 5 E</string>
+    <string name="strMoca4">Copiar el cubo</string>
+    <string name="strMoca5">Contorno</string>
+    <string name="strMoca6">Identificación</string>
+    <string name="strMoca7">Puerco</string>
+    <string name="strMoca8">Burro</string>
+    <string name="strMoca9">Canguro</string>
+    <string name="strMoca10">Memoria</string>
+    <string name="strMoca11">Lea la lista de palabras, el paciente debe repetirlas.\nHaga dos intentos.\nRecuérdeselas 5 minutos más tarde</string>
+    <string name="strMoca12">Tren\nHuevo\nSombrero\nSilla\nAzul</string>
+    <string name="strMoca13">El paciente debe repetirlos en el mismo orden</string>
+    <string name="strMoca14">El paciente debe repetirlos en orden inverso</string>
+    <string name="strMoca15">Número de errores</string>
+    <string name="strMoca16">Números</string>
+    <string name="strMoca17">Agujas</string>
+    <string name="strMoca18">Intento 2</string>
+    <string name="strMoca19">Atención</string>
+    <string name="strMoca20">Lea la serie de números</string>
+    <string name="strMoca21">5 4 1 8 7</string>
+    <string name="strMoca22">1 7 4</string>
+    <string name="strMoca23">Lea la serie de letras</string>
+    <string name="strMoca24">F B A C M N A A J K L B L A L F A K D E A A A J A M O F A A B</string>
+    <string name="strMoca25">Restar 7 en 7 empezando desde 80</string>
+    <string name="strMoca26">73</string>
+    <string name="strMoca27">66</string>
+    <string name="strMoca28">59</string>
+    <string name="strMoca29">52</string>
+    <string name="strMoca30">45</string>
+    <string name="strMoca31">Lenguaje</string>
+    <string name="strMoca32">Repetir</string>
+    <string name="strMoca33">Ella escuchó que el abogado de él fue el primero en demandar después del accidente</string>
+    <string name="strMoca34">Las niñas que recibieron demasiados dulces tuvieron dolores de estómago</string>
+    <string name="strMoca35">Fluidez del lenguaje</string>
+    <string name="strMoca36">Número de palabras dichas con la letra “M”</string>
+    <string name="strMoca37">Abstracción</string>
+    <string name="strMoca38">Semejanza entre</string>
+    <string name="strMoca39">Ojo y oído</string>
+    <string name="strMoca40">Trompeta y piano</string>
+    <string name="strMoca41">Recuerdo diferido</string>
+    <string name="strMoca42">Escala de la memoria (MIS)</string>
+    <string name="strMoca43">Sin pistas</string>
+    <string name="strMoca44">Tren</string>
+    <string name="strMoca45">Huevo</string>
+    <string name="strMoca46">Sombrero</string>
+    <string name="strMoca47">Silla</string>
+    <string name="strMoca48">Azul</string>
+    <string name="strMoca49">X3</string>
+    <string name="strMoca50">Pista de categoría</string>
+    <string name="strMoca51">X2</string>
+    <string name="strMoca52">X1</string>
+    <string name="strMoca53">Pista de elección múltiple</string>
+    <string name="strMoca54">Orientación</string>
+    <string name="strMoca55">Fecha</string>
+    <string name="strMoca56">Mes</string>
+    <string name="strMoca57">Año</string>
+    <string name="strMoca58">Día de la semana</string>
+    <string name="strMoca59">Lugar</string>
+    <string name="strMoca60">Localidad</string>
+    <string name="string_escolaridad">Años de escolaridad</string>
+    <string name="strSarcf">SARC-F</string>
+
+    <string name="strSarcf1">Ninguna</string>
+    <string name="strSarcf2">Alguna</string>
+    <string name="strSarcf3">Mucha o incapaz</string>
+    <string name="strSarcf4">Fuerza</string>
+    <string name="strSarcf5">Que tanta dificultad tiene para llevar o cargar 4.5kg?</string>
+    <string name="strSarcf6">Asistencia para caminar</string>
+    <string name="strSarcf7">¿Qué tanta dificultad tiene para cruzar caminando un cuarto?</string>
+    <string name="strSarcf8">Levantarse de una silla</string>
+    <string name="strSarcf9">¿Qué tanta dificultad tiene para levantarse de una silla o cama?</string>
+    <string name="strSarcf10">Subir escaleras</string>
+    <string name="strSarcf11">¿Qué tanta dificultad tiene para subir 10 escalones?</string>
+    <string name="strSarcf12">Caídas</string>
+    <string name="strSarcf13">¿Cuántas veces se ha caído en el último año?</string>
+    <string name="strSarcf14">1 a 3 caídas</string>
+    <string name="strSarcf15">4 o más caídas</string>
+    <string name="strSarcf16">Alta probabilidad de sarcopenia</string>
+    <string name="strSarcf17">Baja probabilidad de sarcopenia</string>
+    <string name="strKatz">Escala Katz</string>
+
+    <string name="strMiniC">Minicog</string>
+    <string name="strMiniC1">Registro y evocación de palabras</string>
+    <string name="strMiniC2">Dibujo del reloj</string>
+    <string name="hint_rep_string">10.0</string>
+    <string name="senior_fitness_test">Senior Fitness Test</string>
+    <string name="strAb1">Carencia de familia</string>
+    <string name="strAb2">Rechazo familiar</string>
+    <string name="strAb3">Carencia de recursos económicos</string>
+    <string name="strAb4">Mala alimentación</string>
+    <string name="strAb5">Falta de higiene de la persona</string>
+    <string name="strAb6">Cuidados rutinarios</string>
+    <string name="strAb7">Falta de atención emocional</string>
+    <string name="strAb8">Falta de desarrollo psicológico</string>
+    <string name="strAb9">Necesidades médicas atendidas tardíamente o no atendidas</string>
+    <string name="strAb10">Hematomas</string>
+    <string name="strAb11">Laceraciones</string>
+    <string name="strAb12">Equimosis</string>
+    <string name="strAb13">Fracturas</string>
+    <string name="strAbandono">Indicadores de abandono</string>
+    <string name="image_saved">Imagen guardada en la galería</string>
+    <string name="datos_interes">Historia Clínica</string>
+    <string name="history_string_title">Historia clínica geriátrica</string>
+    <string name="exp_name">Nombre</string>
+    <string name="exp_sex">Sexo</string>
+    <string name="exp_lugar_de_nacimiento">Lugar de nacimiento</string>
+    <string name="exp_fecha_de_nacimiento">Fecha de nacimiento</string>
+    <string name="exp_escolaridad">Grado de intrucción</string>
+    <string name="exp_estado_civil">Estado civil</string>
+    <string name="exp_numero_de_habitacion">Número de habitación</string>
+    <string name="exp_ocupacion">Ocupación</string>
+    <string name="exp_lugar_habitual">Lugar habitual donde se encuentra</string>
+    <string name="exp_cuidador_responsable">Familiar o cuidador responsable</string>
+    <string name="exp_signos_vitales">Signos vitales</string>
+    <string name="exp_temperatura">Temperatura</string>
+    <string name="exp_talla">Talla</string>
+    <string name="exp_peso">Peso</string>
+    <string name="exp_ta">TA</string>
+    <string name="exp_fc">FC</string>
+    <string name="exp_fr">FR</string>
+    <string name="exp_imc">IMC</string>
+    <string name="exp_apetito">Apetito</string>
+    <string name="exp_sed">Sed</string>
+    <string name="exp_antecendentes_hf">Antecendentes heredofamiliares</string>
+    <string name="exp_patologia">Patología</string>
+    <string name="exp_familiar">Familiar</string>
+    <string name="illness_tuberculosis">Tuberculosis</string>
+    <string name="illness_hipertension">Hipertensión Arterial</string>
+    <string name="illness_diabetes">Diabetes</string>
+    <string name="illness_infarto_al_miocardio">Infarto al miocardio</string>
+    <string name="illness_demencia">Demencia</string>
+    <string name="illness_cancer">Cáncer</string>
+    <string name="illness_otro">Otro</string>
+    <string name="exp_antecedentes_p">Antecedentes personales patológicos</string>
+    <string name="illness_dislipidemias">Dislipidemias</string>
+    <string name="illness_osteoartritis">Osteoartritis</string>
+    <string name="illness_avc">AVC</string>
+    <string name="illness_cardiovascular">Enfermedad Cardiovascular</string>
+    <string name="illness_transfusiones">Transfusiones</string>
+    <string name="illness_dolor">Dolor</string>
+    <string name="illness_caidas">Accidentes o caídas</string>
+    <string name="illness_hepatitis">Hepatitis</string>
+    <string name="illness_hospitalizaciones">Hospitalizaciones en el último año</string>
+    <string name="antecedentes_pNp">Antecedentes personales NO patológicos</string>
+    <string name="ant_alimentacion">Alimentación</string>
+    <string name="ant_dentadura">Dentadura </string>
+    <string name="ant_audicion">Audición </string>
+    <string name="ant_vision">Visión </string>
+    <string name="ant_actividad_fisica">Actividad física</string>
+    <string name="ant_pasatiempos_y_vicios">Pasatiempos y vicios</string>
+    <string name="ant_conocimiento_del_entorno">Conocimiento del entorno</string>
+    <string name="ant_medicamentos">Medicamentos actuales</string>
+    <string name="exp_aparato_sistema">Aparato o Sistema</string>
+    <string name="exp_observaciones">Observaciones</string>
+    <string name="ant_cardiovascular">Cardiovascular</string>
+    <string name="ant_respiratorio">Respiratorio</string>
+    <string name="ant_digestivo">Digestivo</string>
+    <string name="ant_genitourinario">Genitourinario</string>
+    <string name="ant_hormonal_endocrino">Hormonal o Endocrino</string>
+    <string name="ant_nervioso">Nervioso</string>
+    <string name="ant_piel">Piel</string>
+    <string name="exp_problemas_geriatricos">Síndromes y problemas geriátricos</string>
+    <string name="exp_sindrome_problema">Síndrome o Problema</string>
+    <string name="obs_vertigo_mareo">Vértigo o mareo</string>
+    <string name="obs_delirio">Delirio</string>
+    <string name="obs_deterioro_cognitivo">Deterioro Cognitivo</string>
+    <string name="obs_sincopes">Síncopes</string>
+    <string name="obs_fragilidad">Fragilidad</string>
+    <string name="obs_dolor_cronico">Dolor crónico</string>
+    <string name="obs_debilidad_auditiva">Debilidad auditiva</string>
+    <string name="obs_debilidad_visual">Debilidad visual</string>
+    <string name="obs_insomnio">Insomnio</string>
+    <string name="obs_polifarmacia">Polifarmacia</string>
+    <string name="obs_incontinencia_urinaria">Incontinencia urinaria</string>
+    <string name="obs_estrenimiento">Estreñimiento</string>
+    <string name="obs_ulceras_por_presion">Úlceras por presión</string>
+    <string name="obs_inmovilidad">Inmovilidad</string>
+    <string name="obs_auxiliar_de_marcha">Uso de auxiliar de la marcha</string>
+    <string name="obs_fracturas">Fracturas</string>
+    <string name="obs_desnutricion">Desnutrición</string>
+    <string name="exp_fisiotrapia">Fisiotrapia</string>
+    <string name="exp_fisio_intervencion">Observaciones de intervención</string>
+    <string name="exp_fisio_estrategias">Estrategias de intervención</string>
+    <string name="welcome">Bienvenid@</string>
+    <string name="helper_required">Requerido</string>
+    <string name="first_date">01/11/22</string>
+    <string name="exp_age">Edad</string>
+    <string name="scale_lawton">Escala Lawton y Brody</string>
+    <!-- TODO Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="user">Nombre</string>
+    <string name="prompt_password">Contraseña de la cuenta</string>
+    <string name="remote_password">Contraseña de acceso a la app</string>
+    <string name="action_sign_in">Iniciar Sesión</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="action_register">Registrarse</string>
+    <string name="prefs_file">com.emisc0607.fisiodatostest.PREFERENCE_FILE_KEY</string>
+    <string name="name">Nombre</string>
+    <string name="exp_nam">Nombre</string>
+    <string name="exp_fecha_de_primer_valoracion">Fecha de primer valoración</string>
+    <string name="db_expedientes">expedientes</string>
+    <string name="db_aplicante">aplicante</string>
+    <string name="db_datos_interes">Historia Clínica</string>
+    <string name="warning_texto_vacio">No deje ningún campo vacío</string>
+    <string name="exp_na_texto">NA</string>
+    <string name="aname">Nombre</string>
+    <string name="db_escalas">Escalas</string>
+    <string name="escala_tinetti">Escala Tinetti</string>
+    <string name="escala_ecr_downton">Escala de Riesgo de Caidas de JH Dontown</string>
+    <string name="escala_dinamarca">Escala Dinamarca</string>
+    <string name="escala_norton">Escala Norton</string>
+    <string name="escala_braden">Escala Braden</string>
+    <string name="escala_minimental">Escala Minimental</string>
+    <string name="escala_lawton">Lawton y Brody</string>
+    <string name="escala_bathel">Barthel</string>
+    <string name="escala_katz">Katz</string>
+    <string name="escala_yesavage">Yesavage</string>
+    <string name="escala_frail">Frail</string>
+    <string name="escala_sarcf">SarcF</string>
+    <string name="escala_bateria">Bateria de breve rendimiento</string>
+    <string name="escala_sft">Senior Fitness Test</string>
+    <string name="escala_mininutricional">Mininutricional</string>
+    <string name="exp_evaluacion_fisio">Evaluación fisioterapeuta</string>
+    <string name="evf_inspeccion_y_palpacion">Inspección y palpación (incluir dolor: tipo, lugar e intensidad)</string>
+    <string name="evf_movilidad_articular">Movilidad articular (ROM y fin de pista)</string>
+    <string name="evf_fuerza_muscular">Fuerza muscular (Escala de Daniels)</string>
+    <string name="evf_sensibilidad_y_reflejos">Sensibilidad y reflejos osteotendinosos</string>
+    <string name="evf_pruebas_especificas">Pruebas específicas</string>
+    <string name="evf_analisis_de_postura">Análisis de postura</string>
+    <string name="evf_analisis_de_marcha">Análisis de marcha</string>
+    <string name="evf_diagnostico_funcional">Diagnostico funcional</string>
+    <string name="evf_intervencion_objetivos">Intervención objetivos</string>
+    <string name="evf_intervencion_estrategias">Intervención estrategias</string>
+    <string name="evf_motivo_de_consulta">Motivo de consulta</string>
+    <string name="evf_exploracion_fisica">Exploración física</string>
+    <string name="evf_tratamiento">Tratamiento</string>
+    <string name="indab_conclusion">Conclusiones</string>
+    <string name="strAb14">Quemaduras</string>
+    <string name="strAb15">Luxaciones</string>
+    <string name="strAb16">Lesiones musculares</string>
+    <string name="strAb17">Traumatismos craneoencefálicos</string>
+    <string name="strAb18">Trauma ocular</string>
+    <string name="strAb19">Otros traumas</string>
+    <string name="strAb20">Baja autoestima</string>
+    <string name="strAb21">Sentimientos de miedo</string>
+    <string name="strAb22">Sentimientos de ira</string>
+    <string name="strAb23">Sentimientos de vulnerabilidad</string>
+    <string name="strAb24">Sentimientos de tristeza</string>
+    <string name="strAb25">Sentimientos de humillación</string>
+    <string name="strAb26">Sentimientos de desesperación</string>
+    <string name="strAb27">Trastornos psiquiátricos</string>
+    <string name="strAb28">Abuso o dependencia de sustancias</string>
+    <string name="strAb29">Ideación o intento suicida</string>
+    <string name="strAb30">Lesiones o infecciones genitales, anales o del tracto urinario</string>
+    <string name="strAb31">Baja autoestima</string>
+    <string name="strAb32">Ideas y actos autodestructivos</string>
+    <string name="strAb33">Trastornos sexuales</string>
+    <string name="strAb34">Abuso o dependencia de sustancias</string>
+    <string name="strAb35">Alteraciones en el funcionamiento social</string>
+    <string name="strAb36">Incapacidad para ejercer autonomía reproductiva y sexual</string>
+    <string name="str_no_valorable">No valorable</string>
+    <string name="str_presente">Presente</string>
+    <string name="str_ausente">Ausente</string>
+    <string name="escala_minicog">Minicog</string>
+    <string name="hint_expediente">Expediente</string>
+    <string name="str_share">Share</string>
+    <string name="ok">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+
+
+</resources>

@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".MinimentalActivity">
+
+    <TextView
+        android:id="@+id/tvExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/secondaryColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/josefin_bold"
+        android:gravity="center"
+        android:text="@string/escala_minimental"
+        android:textColor="@color/secondaryColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvExp" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:fontFamily="@font/josefin_medium"
+        android:text="Fecha"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/secondaryDarkColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/common_padding_default"
+        app:layout_constraintBottom_toTopOf="@id/logouaq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDate">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvMiniM1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_dimen"
+                android:fontFamily="@font/josefin_bold"
+                android:gravity="center_vertical"
+                android:text="@string/strMiniM1"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/tvMiniM2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strMiniM2"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/tvMiniM1"
+                app:layout_constraintTop_toBottomOf="@id/tvMiniM1" />
+
+            <TableLayout
+                android:id="@+id/table1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_dimen"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/tvMiniM2"
+                app:layout_constraintTop_toBottomOf="@id/tvMiniM2">
+
+                <TableRow>
+
+                    <CheckBox
+                        android:id="@+id/cb1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/strMiniM3" />
+
+                    <CheckBox
+                        android:id="@+id/cb2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/strMiniM8" />
+                </TableRow>
+
+                <TableRow>
+
+                    <CheckBox
+                        android:id="@+id/cb3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/strMiniM5" />
+
+                    <CheckBox
+                        android:id="@+id/cb4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/strMiniM6" />
+                </TableRow>
+
+                <TableRow>
+
+                    <CheckBox
+                        android:id="@+id/cb5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/strMiniM7" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/tvMiniM3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strMiniM9"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/tvMiniM1"
+                app:layout_constraintTop_toBottomOf="@id/table1" />
+
+            <TableLayout
+                android:id="@+id/table2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_dimen"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/tvMiniM3"
+                app:layout_constraintTop_toBottomOf="@id/tvMiniM3">
+
+                <TableRow>
+
+                    <CheckBox
+                        android:id="@+id/cb6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/strMiniM10" />
+
+                    <CheckBox
+                        android:id="@+id/cb7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/strMiniM11" />
+                </TableRow>
+
+                <TableRow>
+
+                    <CheckBox
+                        android:id="@+id/cb8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/strMiniM12" />
+
+                    <CheckBox
+                        android:id="@+id/cb9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/strMiniM13" />
+                </TableRow>
+
+                <TableRow>
+
+                    <CheckBox
+                        android:id="@+id/cb10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/strMiniM14" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/tvMiniM4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_dimen"
+                android:fontFamily="@font/josefin_bold"
+                android:text="@string/strMiniM15"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/tvMiniM1"
+                app:layout_constraintTop_toBottomOf="@id/table2" />
+
+            <TableLayout
+                android:id="@+id/table3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_dimen"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/tvMiniM4"
+                app:layout_constraintTop_toBottomOf="@id/tvMiniM4">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/string_palabra_1"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@id/tvMiniM1"
+                        app:layout_constraintTop_toBottomOf="@id/table2" />
+
+                    <EditText
+                        android:id="@+id/etP1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:hint="@string/string_hint1"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:paddingHorizontal="@dimen/default_dimen" />
+
+                    <CheckBox
+                        android:id="@+id/cb11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/right_cb_string" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/string_palabra_2"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@id/tvMiniM1"
+                        app:layout_constraintTop_toBottomOf="@id/table2" />
+
+                    <EditText
+                        android:id="@+id/etP2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:hint="@string/string_hint2"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:paddingHorizontal="@dimen/default_dimen" />
+
+                    <CheckBox
+                        android:id="@+id/cb12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/right_cb_string" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/josefin_regular"
+                        android:text="@string/string_palabra_3"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@id/tvMiniM1"
+                        app:layout_constraintTop_toBottomOf="@id/table2" />
+
+                    <EditText
+                        android:id="@+id/etP3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:hint="@string/string_hint3"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:paddingHorizontal="@dimen/default_dimen" />
+
+                    <CheckBox
+                        android:id="@+id/cb13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/right_cb_string" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/table4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/table3"
+                app:layout_constraintTop_toBottomOf="@id/table3">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingEnd="@dimen/default_dimen"
+                        android:text="@string/strMiniM16"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@id/tvMiniM1"
+                        app:layout_constraintTop_toBottomOf="@id/table2" />
+
+                    <EditText
+                        android:id="@+id/etNR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:backgroundTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:hint="@string/strMiniM43"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:paddingHorizontal="@dimen/default_dimen" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/tvMiniM5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_dimen"
+                android:fontFamily="@font/josefin_bold"
+                android:text="@string/strMiniM17"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/tvMiniM1"
+                app:layout_constraintTop_toBottomOf="@id/table4" />
+
+            <TextView
+                android:id="@+id/tvMiniM6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strMiniM18"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/tvMiniM1"
+                app:layout_constraintTop_toBottomOf="@id/tvMiniM5" />
+
+            <TableLayout
+                android:id="@+id/table5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_dimen"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/tvMiniM2"
+                app:layout_constraintTop_toBottomOf="@id/tvMiniM6">
+
+                <TableRow>
+
+                    <CheckBox
+                        android:id="@+id/cb14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/strMiniM19" />
+
+                    <CheckBox
+                        android:id="@+id/cb15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/strMiniM20" />
+
+                    <CheckBox
+                        android:id="@+id/cb16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/strMiniM21" />
+                </TableRow>
+
+                <TableRow>
+
+                    <CheckBox
+                        android:id="@+id/cb17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/strMiniM22"
+                        android:buttonTint="@color/secondaryDarkColor" />
+
+                    <CheckBox
+                        android:id="@+id/cb18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/strMiniM23" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/tvMiniM7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strMiniM24"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/tvMiniM1"
+                app:layout_constraintTop_toBottomOf="@id/table5" />
+
+            <TableLayout
+                android:id="@+id/table6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_dimen"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/tvMiniM2"
+                app:layout_constraintTop_toBottomOf="@id/tvMiniM7">
+
+                <TableRow>
+
+                    <CheckBox
+                        android:id="@+id/cb19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/strMiniM25" />
+
+                    <CheckBox
+                        android:id="@+id/cb20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/strMiniM26" />
+
+                    <CheckBox
+                        android:id="@+id/cb21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/strMiniM27" />
+                </TableRow>
+
+                <TableRow>
+
+                    <CheckBox
+                        android:id="@+id/cb22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/strMiniM28" />
+
+                    <CheckBox
+                        android:id="@+id/cb23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/strMiniM29" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/tvMiniM8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_dimen"
+                android:fontFamily="@font/josefin_bold"
+                android:text="@string/strMiniM17"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/tvMiniM1"
+                app:layout_constraintTop_toBottomOf="@id/table6" />
+
+            <TextView
+                android:id="@+id/tvMiniM9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strMiniM46"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/tvMiniM1"
+                app:layout_constraintTop_toBottomOf="@id/tvMiniM8" />
+
+            <TableLayout
+                android:id="@+id/table7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_dimen"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/tvMiniM2"
+                app:layout_constraintTop_toBottomOf="@id/tvMiniM9">
+
+                <TableRow
+                    android:layout_width="0dp"
+                    android:layout_height="0dp">
+
+                    <CheckBox
+                        android:id="@+id/cb24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/string_hint1" />
+
+                    <CheckBox
+                        android:id="@+id/cb25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/string_hint2" />
+
+                    <CheckBox
+                        android:id="@+id/cb26"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:buttonTint="@color/secondaryDarkColor"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/string_hint3" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/tvMiniM10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_dimen"
+                android:fontFamily="@font/josefin_bold"
+                android:text="@string/strMiniM31"
+                android:textColor="@color/secondaryDarkColor"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/tvMiniM1"
+                app:layout_constraintTop_toBottomOf="@id/table7" />
+
+            <TextView
+                android:id="@+id/tvMiniM11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefin_regular"
+                android:text="@string/strMiniM44"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/tvMiniM1"
+                app:layout_constraintTop_toBottomOf="@id/tvMiniM10" />
+
+            <TableLayout
+                android:id="@+id/table8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_dimen"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/tvMiniM2"
+                app:layout_constraintTop_toBottomOf="@id/tvMiniM11">
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/cb27"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/strMiniM32"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/cb28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:fontFamily="@font/josefin_regular"
+                        android:paddingHorizontal="@dimen/default_dimen"
+                        android:text="@string/strMiniM33"
+                        android:textColor="@color/black" />
+                </TableRow>
+
+                <CheckBox
+                    android:id="@+id/cb29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:paddingHorizontal="@dimen/default_dimen"
+                    android:text="@string/strMiniM45" />
+
+                <CheckBox
+                    android:id="@+id/cb30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:paddingHorizontal="@dimen/default_dimen"
+                    android:text="@string/strMiniM34" />
+
+                <TextView
+                    android:id="@+id/tvMiniM12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="@string/strMiniM35"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/cb31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:paddingHorizontal="@dimen/default_dimen"
+                    android:text="@string/strMiniM36" />
+
+                <TextView
+                    android:id="@+id/cb34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefin_regular"
+                    android:paddingHorizontal="@dimen/default_dimen"
+                    android:text="@string/strMiniM39"
+                    android:textColor="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/cb35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:paddingHorizontal="@dimen/default_dimen"
+                    android:text="@string/strMiniM40" />
+
+                <CheckBox
+                    android:id="@+id/cb36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:paddingHorizontal="@dimen/default_dimen"
+                    android:text="@string/strMiniM41" />
+
+                <LinearLayout android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:layout_width="@dimen/evidence_dimen"
+                        android:layout_height="@dimen/evidence_dimen" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/bCamera1"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="Capturar" />
+
+                <CheckBox
+                    android:id="@+id/cb37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/secondaryDarkColor"
+                    android:fontFamily="@font/josefin_regular"
+                    android:paddingHorizontal="@dimen/default_dimen"
+                    android:text="@string/strMiniM42" />
+
+                <LinearLayout android:gravity="center_horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image2"
+                        android:layout_width="@dimen/evidence_dimen"
+                        android:layout_height="@dimen/evidence_dimen" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/bCamera2"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/josefin_regular"
+                    android:text="Capturar" />
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/tvRes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/default_dimen"
+                android:fontFamily="@font/josefin_regular"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/table8" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/default_dimen"
+                android:text="@string/bRes_string"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRes"
+                android:fontFamily="@font/josefin_regular" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:src="@drawable/ic_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nestedScroll" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logouaq"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginStart="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/logouaq"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ingenieria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/ingenieria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/enfermeria" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/enfermeria"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/image"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:src="@drawable/enfermeria"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

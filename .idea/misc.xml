@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/drawable/logoUAQ_background.xml" value="0.1" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_abandono.xml" value="0.1077762619372442" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_barthel.xml" value="0.34430176565008025" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_batery_br.xml" value="0.33515625" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_braden.xml" value="0.3629441624365482" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_dinamarca.xml" value="0.33515625" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_ecrdownton.xml" value="0.33515625" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_escalas.xml" value="0.33515625" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_eval_fisio.xml" value="0.4" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_ficha_de_id.xml" value="0.6" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_frail.xml" value="0.4" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_gds.xml" value="0.4" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_history.xml" value="0.4" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_katz.xml" value="0.1972534332084894" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_katz2.xml" value="0.33515625" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_lawton.xml" value="0.1" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_main.xml" value="0.4223433242506812" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_menu_scales.xml" value="0.33515625" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_minicog.xml" value="0.33515625" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_minimental.xml" value="0.2" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_mininutricional.xml" value="0.4" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_moca.xml" value="0.536" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_norton.xml" value="0.4" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_oars.xml" value="0.3106444605358436" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_sarcf.xml" value="0.33515625" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_scales.xml" value="0.33515625" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_search.xml" value="0.2" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_sft.xml" value="0.4" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_tilbur.xml" value="0.33515625" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_tinetti.xml" value="0.6" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/activity_yesavage.xml" value="0.1" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/layout/content_scrolling.xml" value="0.33515625" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/menu/menu_escalas.xml" value="0.33515625" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.184" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/mipmap-anydpi-v26/logo.xml" value="0.184" />
+        <entry key="..\:/Users/emi_s/Documents/AndroidStudio/ActivityFisioDatosTest/app/src/main/res/mipmap-anydpi-v26/logoUAQ.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
