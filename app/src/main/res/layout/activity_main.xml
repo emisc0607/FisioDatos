@@ -465,6 +465,7 @@
         android:layout_height="@dimen/image"
         android:layout_marginEnd="@dimen/common_padding_default"
         android:layout_marginBottom="@dimen/common_padding_default"
+        android:clickable="true"
         android:src="@drawable/enfermeria"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

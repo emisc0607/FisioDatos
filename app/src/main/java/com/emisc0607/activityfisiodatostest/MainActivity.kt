@@ -25,6 +25,7 @@ import com.emisc0607.activityfisiodatostest.R.*
 import com.emisc0607.activityfisiodatostest.R.string.*
 import com.emisc0607.activityfisiodatostest.databinding.ActivityMainBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.firebase.firestore.FirebaseFirestore
@@ -49,13 +50,13 @@ enum class ProviderType {
 }
 
 class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
-    var currentId:String=""
+    var currentId: String = ""
     private val menuScalesLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { ActivityResult ->
             if (ActivityResult.resultCode == RESULT_OK) {
                 val data = ActivityResult.data?.getStringExtra("MENS_DATA").orEmpty()
                 //Toast.makeText(this, "Datos guardados", Toast.LENGTH_LONG).show()
-                currentId=data
+                currentId = data
             } else {
                 //Toast.makeText(this, "Sin datos guardados", Toast.LENGTH_SHORT).show()
             }
@@ -65,7 +66,7 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             if (ActivityResult.resultCode == RESULT_OK) {
                 val data = ActivityResult.data?.getStringExtra("FID_DATA").orEmpty()
                 //Toast.makeText(this, "Datos guardados", Toast.LENGTH_LONG).show()
-                currentId=data
+                currentId = data
             } else {
                 //Toast.makeText(this, "Sin datos guardados", Toast.LENGTH_SHORT).show()
             }
@@ -75,7 +76,7 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             if (ActivityResult.resultCode == RESULT_OK) {
                 val data = ActivityResult.data?.getStringExtra("HIS_DATA").orEmpty()
                 //Toast.makeText(this, "Datos guardados", Toast.LENGTH_LONG).show()
-                currentId=data
+                currentId = data
             } else {
                 //Toast.makeText(this, "Sin datos guardados", Toast.LENGTH_SHORT).show()
             }
@@ -85,7 +86,7 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             if (ActivityResult.resultCode == RESULT_OK) {
                 val data = ActivityResult.data?.getStringExtra("EVA_DATA").orEmpty()
                 //Toast.makeText(this, "Datos guardados", Toast.LENGTH_LONG).show()
-                currentId=data
+                currentId = data
             } else {
                 //Toast.makeText(this, "Sin datos guardados", Toast.LENGTH_SHORT).show()
             }
@@ -96,7 +97,7 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
                 val data = ActivityResult.data?.getStringExtra("IND_DATA").orEmpty()
                 ////Toast.makeText(this, data, Toast.LENGTH_LONG).show()
                 //Toast.makeText(this, "Datos guardados", Toast.LENGTH_LONG).show()
-                currentId=data
+                currentId = data
             } else {
                 //Toast.makeText(this, "Sin datos guardados", Toast.LENGTH_SHORT).show()
             }
@@ -128,6 +129,7 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             val indice = it.documents.lastIndex
             binding.etExp.setText(indice.toString())
         }
+        easterEgg()
         binding.bSaveNew.setOnClickListener {
             db.collection(getString(db_expedientes)).get().addOnSuccessListener {
                 val indice = it.documents.lastIndex + 1
@@ -148,26 +150,26 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
                             "Tipo de centro" to "Centro de día"
                         )
                     )
-                db.collection(getString(com.emisc0607.activityfisiodatostest.R.string.db_expedientes))
+                db.collection(getString(db_expedientes))
                     .document(indice.toString())
-                    .collection(getString(com.emisc0607.activityfisiodatostest.R.string.db_datos_interes))
+                    .collection(getString(db_datos_interes))
                     .document(
                         getString(
-                            com.emisc0607.activityfisiodatostest.R.string.db_escalas
+                            db_escalas
                         )
                     )
                     .set(
                         hashMapOf(
-                            getString(com.emisc0607.activityfisiodatostest.R.string.escala_tinetti) to ""
+                            getString(escala_tinetti) to ""
                         )
                     )
-                db.collection(getString(com.emisc0607.activityfisiodatostest.R.string.db_expedientes))
+                db.collection(getString(db_expedientes))
                     .document(indice.toString())
-                    .collection(getString(com.emisc0607.activityfisiodatostest.R.string.db_datos_interes))
-                    .document(getString(com.emisc0607.activityfisiodatostest.R.string.exp_evaluacion_fisio))
+                    .collection(getString(db_datos_interes))
+                    .document(getString(exp_evaluacion_fisio))
                     .set(
                         hashMapOf(
-                            getString(com.emisc0607.activityfisiodatostest.R.string.evf_motivo_de_consulta) to ""
+                            getString(evf_motivo_de_consulta) to ""
                         )
                     )
                 binding.etExp.setText(indice.toString())
@@ -762,7 +764,16 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         dialog.show()
     }
 
-    fun showErrorName() {
+    private fun showErrorName() {
         Toast.makeText(this, "El expediente no puede estar vacio", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun easterEgg() {
+        binding.ingenieria.setOnClickListener {
+            Snackbar.make(binding.root,
+                "Developed with <3 by emisc0607",
+                Snackbar.LENGTH_SHORT)
+                .show()
+        }
     }
 }
